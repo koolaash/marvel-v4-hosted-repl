@@ -53,7 +53,8 @@ module.exports = {
                     client.emoji.music + "Music\n" +
                     client.emoji.image + "Avatar\n" +
                     client.emoji.uptime + "Roles\n" +
-                    client.emoji.auto + "Automoderation" +
+                    client.emoji.auto + "Automoderation\n" +
+                    client.emoji.tourney + "Tournament" +
                     "\n━━━━━━━━━━━━━━━━━**"
                 )
                 .setImage(client.gif.main),
@@ -370,7 +371,24 @@ module.exports = {
                     p +
                     "unignore channel <#channel | channel_id>` - to remove any channel from ignored list"
                 )
-                .setImage(client.gif.automod);
+                .setImage(client.gif.automod),
+          em13 = new MessageEmbed()
+            .setColor(client.embed.cm)
+      .setFooter(
+        message.author.tag + " : Page 5/" + pages,
+        message.author.displayAvatarURL({ dynamic: true })
+      )
+      .setDescription("**THESE COMMAND REQUIRES MANAGE ROLES PERMISSION BECAUSE THEY WILL ADD ROLE TO MEMBERS AFTER VERIFICATION THAT YOU PROVIDE**")
+      .addField(
+        "TOURNAMENT MANAGER" +
+        "\n━━━━━━━━━━━━━━━━━",
+        "`" +
+        p + "tourney/t <setup|show|active|delete>` - to setup a new tourney get details about tourney and delete the tourney\n`" +
+        p + "tourney/t` - to get more details \n`" +
+        p + "tourney-ss/ts <setup|show|active|delete>` - to setup a new tourney get details about tourney and delete the tourney\n**This tourney helps you get ss registeration from the users**\n`" +
+        p + "tourney-ss/ts` - to get more details\n" + "\n**━━━━━━━━━━━━━━━━━**"
+      )
+      .setImage(client.gif.tourney);
 
 
         if (arg[0]) {
@@ -458,7 +476,8 @@ module.exports = {
             option9 = { label: 'Music', value: '9', emoji: client.emoji.music_id },
             option10 = { label: 'Avatars', value: '10', emoji: client.emoji.image_id },
             option11 = { label: 'Roles', value: '11', emoji: client.emoji.uptime_id },
-            option12 = { label: 'Automoderation', value: '12', emoji: client.emoji.auto_id }
+            option12 = { label: 'Automoderation', value: '12', emoji: client.emoji.auto_id },
+            option13 = { label: 'Tournament', value: '13', emoji: client.emoji.tourney_id }
 
         options.push(option0, option1, option2, option3, option4, option5, option6, option7, option8, option9, option10, option11, option12)
         let menu = new MessageSelectMenu()
@@ -482,7 +501,7 @@ module.exports = {
                 allowedMentions: { repliedUser: false }
             }),
             collector = helpMessage.createMessageComponentCollector({ time: 90000 }),
-            embeds = [em0, em1, em2, em3, em4, em5, em6, em7, em8, em9, em10, em11, em12]
+            embeds = [em0, em1, em2, em3, em4, em5, em6, em7, em8, em9, em10, em11, em12, em13]
 
         for (let i = 0; i < 0; i++) embeds.push(new MessageEmbed().setColor(client.embed.cm).setFooter(i))
 

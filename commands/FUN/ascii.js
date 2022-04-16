@@ -22,7 +22,6 @@ module.exports = {
                 ]
             });
         }
-        let maxlen = 20;
         if (text.length > 20) {
             return message.reply({
                 embeds: [

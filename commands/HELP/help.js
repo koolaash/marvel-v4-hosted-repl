@@ -374,10 +374,10 @@ module.exports = {
                 .setImage(client.gif.automod),
           em13 = new MessageEmbed()
             .setColor(client.embed.cm)
-      .setFooter(
-        message.author.tag + " : Page 5/" + pages,
-        message.author.displayAvatarURL({ dynamic: true })
-      )
+      .setFooter({
+        text: message.author.tag + " : Page 13/" + pages,
+        iconURL: message.author.displayAvatarURL({ dynamic: true })
+      })
       .setDescription("**THESE COMMAND REQUIRES MANAGE ROLES PERMISSION BECAUSE THEY WILL ADD ROLE TO MEMBERS AFTER VERIFICATION THAT YOU PROVIDE**")
       .addField(
         "TOURNAMENT MANAGER" +
@@ -448,11 +448,11 @@ module.exports = {
                 .setEmoji(client.emoji.first_id)
                 .setCustomId("help_home"),
             backButton = new MessageButton()
-                .setStyle("SUCCESS")
+                .setStyle("PRIMARY")
                 .setEmoji(client.emoji.back_id)
                 .setCustomId('help_back'),
             forwardButton = new MessageButton()
-                .setStyle("SUCCESS")
+                .setStyle("PRIMARY")
                 .setEmoji(client.emoji.next_id)
                 .setCustomId('help_forward'),
             endButton = new MessageButton()
@@ -479,7 +479,7 @@ module.exports = {
             option12 = { label: 'Automoderation', value: '12', emoji: client.emoji.auto_id },
             option13 = { label: 'Tournament', value: '13', emoji: client.emoji.tourney_id }
 
-        options.push(option0, option1, option2, option3, option4, option5, option6, option7, option8, option9, option10, option11, option12)
+        options.push(option0, option1, option2, option3, option4, option5, option6, option7, option8, option9, option10, option11, option12, option13)
         let menu = new MessageSelectMenu()
             .setPlaceholder('Select Command Category')
             .setCustomId('pagMenu')

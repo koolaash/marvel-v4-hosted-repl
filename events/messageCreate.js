@@ -30,57 +30,13 @@ module.exports.run = async (client, message) => {
                 .setLabel("|  INVITE")
                 .setURL(client.config.binvite)
                 .setEmoji(client.emoji.invite_id)
-                .setDisabled(false),
-            btn3 = new MessageButton()
-                .setStyle("LINK")
-                .setLabel("|  WEBSITE")
-                .setURL(client.config.bwebsite)
-                .setEmoji(client.emoji.dm_id)
-                .setDisabled(false),
-            btn4 = new MessageButton()
-                .setStyle("LINK")
-                .setLabel("|  VOTE")
-                .setURL(client.config.bvote)
-                .setEmoji(client.emoji.discord_id)
-                .setDisabled(false),
-            row = new MessageActionRow()
-                .addComponents(btn1, btn2, btn3, btn4),
+                .setDisabled(false)
+        row = new MessageActionRow()
+            .addComponents(btn1, btn2),
             mention = new MessageEmbed()
-                .setTitle(client.user.username)
                 .addField(
-                    `**━━━━━━━━━━━━━━━━━**\n${client.emoji.ar}|  SERVER PREFIX`,
-                    `\`${prefix}\``
+                    `${client.emoji.marvel}Hey Marvel Here`, `Server Prefix : \`${prefix}\``
                 )
-                .addField(
-                    `${client.emoji.tool}| USAGES`,
-                    "`" +
-                    prefix +
-                    "help` - for bots help menu \n" +
-                    "`" +
-                    prefix +
-                    "support` - for bots support \n" +
-                    "`" +
-                    prefix +
-                    "invite` - to invite the bot in your server \n" +
-                    "`" +
-                    prefix +
-                    "vote` - to vote for the bot\n"
-                )
-                .addField(
-                    client.emoji.ar + "| " + "Prefix",
-                    "`" +
-                    prefix +
-                    "prefix <new prefix>` - to change bots prefix\n" +
-                    "`" +
-                    prefix +
-                    "prefix reset` - to change bots prefix to default" +
-                    "\n**━━━━━━━━━━━━━━━━━**"
-                )
-                .addField(
-                    `${client.emoji.ar}| Channel Disabeled`,
-                    `${d}\nUse \`${prefix}enable/disable\` command to change this setting`
-                )
-                .setImage(client.gif.mention)
                 .setColor(client.embed.cm)
                 .setFooter({
                     text: message.author.tag,

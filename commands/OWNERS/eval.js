@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageButton, MessageActionRow } = require("discord.js"),
-  discord = require('disocrd.js');
+  discord = require('discord.js');
 
 module.exports = {
     name: "eval",

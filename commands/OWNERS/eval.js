@@ -1,4 +1,5 @@
-const { MessageEmbed, MessageButton, MessageActionRow } = require("discord.js");
+const { MessageEmbed, MessageButton, MessageActionRow } = require("discord.js"),
+  discord = require('disocrd.js');
 
 module.exports = {
     name: "eval",
@@ -63,7 +64,6 @@ module.exports = {
                     back.setDisabled(true);
                     let row = new MessageActionRow()
                         .addComponents(back, next, extra);
-
                     await m.edit({
                         embeds: [embed],
                         components: [row],
@@ -86,7 +86,7 @@ module.exports = {
                         components: [row],
                     });
                     try {
-                        button.reply({ content: result, ephemeral: true });
+                        await button.reply({ content: result, ephemeral: true });
                     } catch (e) {
                         button.reply({
                             content: "```js\n[object Promise]\n```",

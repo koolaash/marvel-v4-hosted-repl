@@ -15,7 +15,7 @@ module.exports = {
         if (!client.config.bowner.includes(message.author.id)) {
             if (message.member !== message.guild.owner) {
                 if (message.guild.me.roles.highest.position >= message.member.roles.highest.position) {
-                    return message.lineReply({
+                    return message.reply({
                         embeds: [
                             new discord.MessageEmbed({
                                 description:
@@ -30,7 +30,7 @@ module.exports = {
             }
         }
         if (!args[0]) {
-            return message.lineReply({
+            return message.reply({
                 embeds: [
                     new discord.MessageEmbed({
                         description:
@@ -44,7 +44,7 @@ module.exports = {
         const chan = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
 
         if (!chan) {
-            return message.lineReply({
+            return message.reply({
                 embeds: [
                     new discord.MessageEmbed({
                         description:
@@ -59,7 +59,7 @@ module.exports = {
         return (
             db.add("dttl" + message.guild.id, -1) &&
             db.delete("disabeled" + chan.id) &&
-            message.lineReply({
+            message.reply({
                 embeds: [
                     new discord.MessageEmbed({
                         description: client.emoji.success +

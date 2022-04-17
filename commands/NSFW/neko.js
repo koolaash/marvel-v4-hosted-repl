@@ -18,7 +18,7 @@ module.exports = {
       return message.reply(`${client.emoji.fail}| This channel dosen't support nsfw content`);
     }
 
-    let prefix = db.get(`guildPrefix_${message.guild.id}`);
+    let prefix = client.qdb.get(`guildPrefix_${message.guild.id}`);
     if (!prefix) {
       prefix = client.config.pprefix;
     }

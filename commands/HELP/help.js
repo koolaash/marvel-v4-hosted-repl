@@ -431,7 +431,7 @@ module.exports = {
             em15 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 17/" + pages,
+                    text: message.author.tag + " : Page 15/" + pages,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .setImage(client.gif.nsfw)

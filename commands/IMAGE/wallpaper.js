@@ -1,4 +1,5 @@
-const superagent = require("snekfetch"),
+const NEKO = require('nekos.life'),
+    { sfw } = new NEKO(),
     Discord = require("discord.js");
 
 module.exports = {
@@ -10,20 +11,17 @@ module.exports = {
     botPermissions: ["EMBED_LINKS"],
 
     run: async (client, message, args) => {
-
-        superagent
-            .get("https://nekos.life/api/v2/img/wallpaper")
-            .end((err, response) => {
-                const lewdembed = new Discord.MessageEmbed()
-                    .setTitle("Random wallpaper")
-                    .setImage(response.body.url)
-                    .setColor(client.embed.cm)
-                    .setFooter({
-                        text: message.author.tag,
-                        iconURL: message.author.displayAvatarURL({ dynamic: true })
-                    })
-                    .setURL(response.body.url);
-                message.reply({ embeds: [lewdembed] });
-            });
+        await sfw.wallpaper().then(response => {
+            const lewdembed = new Discord.MessageEmbed()
+                .setTitle("Random wallpaper")
+                .setImage(response.url)
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: message.author.tag,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .setURL(response.url);
+            message.reply({ embeds: [lewdembed] });
+        });
     }
 };

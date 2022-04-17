@@ -1,5 +1,4 @@
-const superagent = require("snekfetch"),
-    Discord = require("discord.js");
+const Discord = require("discord.js");
 
 module.exports = {
     name: "foxgirl",
@@ -10,20 +9,20 @@ module.exports = {
     botPermissions: ["EMBED_LINKS"],
 
     run: async (client, message, args) => {
-        
-        superagent
-            .get("https://nekos.life/api/v2/img/foxGirl")
-            .end((err, response) => {
-                const lewdembed = new Discord.MessageEmbed()
-                    .setTitle("Random Foxgirl")
-                    .setImage(response.body.url)
-                    .setColor(client.embed.cm)
-                    .setFooter({
-                        text: `Foxgirl Here Give me a kiss!`,
-                        iconURL: message.author.displayAvatarURL({ dynamic: true })
-                    })
-                    .setURL(response.body.url);
-                message.reply({ embeds: [lewdembed] });
-            });
+
+        let NEKO = require('nekos.life'),
+            { sfw } = new NEKO();
+        await sfw.foxGirl().then(response => {
+            const lewdembed = new Discord.MessageEmbed()
+                .setTitle("Random Foxgirl")
+                .setImage(response.url)
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: `Foxgirl Here Give me a kiss!`,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .setURL(response.url);
+            message.reply({ embeds: [lewdembed] });
+        });
     }
 };

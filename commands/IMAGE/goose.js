@@ -1,5 +1,4 @@
-const superagent = require("snekfetch"),
-    Discord = require("discord.js");
+const Discord = require("discord.js");
 
 module.exports = {
     name: "goose",
@@ -11,19 +10,19 @@ module.exports = {
 
     run: async (client, message, args) => {
 
-        superagent
-            .get("https://nekos.life/api/v2/img/goose")
-            .end((err, response) => {
-                const lewdembed = new Discord.MessageEmbed()
-                    .setTitle("Random goose")
-                    .setImage(response.body.url)
-                    .setColor(client.embed.cm)
-                    .setFooter({
-                        text: message.author.tag,
-                        iconURL: message.author.displayAvatarURL({ dynamic: true })
-                    })
-                    .setURL(response.body.url);
-                message.reply({ embeds: [lewdembed] });
-            });
+        let NEKO = require('nekos.life'),
+            { sfw } = new NEKO();
+        await sfw.goose().then(response => {
+            const lewdembed = new Discord.MessageEmbed()
+                .setTitle("Random goose")
+                .setImage(response.url)
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: message.author.tag,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .setURL(response.url);
+            message.reply({ embeds: [lewdembed] });
+        });
     }
 };

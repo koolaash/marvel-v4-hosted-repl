@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "holo",
+    name: "waifu",
     category: "Image",
-    description: "Sends a random image of a holo",
-    usage: "holo",
+    description: "Sends a random image of a waifu",
+    usage: "waifu",
     userPermissions: [],
     botPermissions: ["EMBED_LINKS"],
 
@@ -12,9 +12,9 @@ module.exports = {
 
         let NEKO = require('nekos.life'),
             { sfw } = new NEKO();
-        await sfw.holo().then(response => {
+        await sfw.waifu().then(response => {
             const lewdembed = new Discord.MessageEmbed()
-                .setTitle("Random Holo")
+                .setTitle("Random waifu")
                 .setImage(response.url)
                 .setColor(client.embed.cm)
                 .setFooter({

@@ -1,7 +1,7 @@
 const discord = require("discord.js"),
- { MessageEmbed } = require("discord.js"),
- NSFW = require("discord-nsfw"),
- nsfw = new NSFW();
+  { MessageEmbed } = require("discord.js"),
+  NSFW = require("discord-nsfw"),
+  nsfw = new NSFW();
 
 module.exports = {
   name: "porn",
@@ -9,14 +9,14 @@ module.exports = {
   description: "shows help menu for the bot",
   userPermissions: [],
   botPermissions: ["EMBED_LINKS"],
-  
+
   async run(client, message, args) {
-const { defprefix, binvite, sserver } = client.config;
-    
+    const { defprefix, binvite, sserver } = client.config;
+
     if (!message.channel.nsfw) {
       return message.reply(client.emoji.fail + "| This channel dosen't support nsfw content");
     }
-   
+
     let prefix = await client.qdb.get("guildPrefix_" + message.guild.id);
 
     if (!prefix) {
@@ -70,21 +70,22 @@ const { defprefix, binvite, sserver } = client.config;
       embed.setImage(image);
       return message.channel.send({ embeds: [embed] });
     } else if (args[0] || !args[0]) {
-      return message.channel.send({embeds:[
-        new MessageEmbed()
-          .setTitle("CATEGORY TEEN")
-          .addField(
-            "USAGE : ",
-            "Aliases : `porn , p`" +
+      return message.channel.send({
+        embeds: [
+          new MessageEmbed()
+            .setTitle("CATEGORY TEEN")
+            .addField(
+              "USAGE : ",
+              "Aliases : `porn , p`" +
               "\nUsage : `" +
               prefix +
               "porn <type> or " +
               prefix +
               "p <type>`"
-          )
-          .addField(
-            "TEEN PORN COMMANDS",
-            "1. " +
+            )
+            .addField(
+              "TEEN PORN COMMANDS",
+              "1. " +
               prefix +
               "porn <anal>\n2. " +
               prefix +
@@ -99,10 +100,11 @@ const { defprefix, binvite, sserver } = client.config;
               "porn <thigh>\n8. " +
               prefix +
               "porn <gif>"
-          )
-          .setColor("GREEN")
-          .setFooter("<> are not required")
-      ]});
+            )
+            .setColor("GREEN")
+            .setFooter("<> are not required")
+        ]
+      });
     }
   }
 };

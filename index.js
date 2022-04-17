@@ -44,11 +44,7 @@ const client = new Client({
     del = new WebhookClient({
         id: "963519810015215670",
         token: "vLEb5pYo6jGT3qoPGtdbe5QAk_QNG85XilbeUSE7r1YijKISTQ4mDiAoHdaegcBRhnOS"
-    }),
-   errweb = new WebhookClient({
-        id: process.env.web_id || client.config.web_id,
-        token: process.env.web_token || client.env.web_token
-   });
+    });
 
 client.commands = new Collection();
 client.aliases = new Collection();
@@ -62,7 +58,12 @@ client.badge = require("./json/badges.json");
 client.error = require("./json/errors.json");
 client.del = del;
 
-const { Database } = require("quickmongo");
+const { Database } = require("quickmongo"),
+    errweb = new WebhookClient({
+        id: process.env.web_id || client.config.web_id,
+        token: process.env.web_token || client.config.web_token
+    });
+
 client.qdb = new Database(client.config.DB || process.env.DB);
 client.qdb.on("ready", async () => {
     console.log(`QUICKMONGO CONNECTED`.yellow);
@@ -85,18 +86,18 @@ require("./events2/moderation.js")(client);
 client.login(process.env.TOKEN || client.config.TOKEN)
 
 process.on("unhandledRejection", (error) => {
-  errweb.send(`\`\`\`js\n${error.stack}\`\`\``);
+    errweb.send(`\`\`\`js\n${error.stack}\`\`\``);
 });
 process.on("uncaughtException", (err, origin) => {
-  errweb.send(`\`\`\`js\n${err.stack}\`\`\``);
+    errweb.send(`\`\`\`js\n${err.stack}\`\`\``);
 });
 process.on("uncaughtExceptionMonitor", (err, origin) => {
-  errweb.send(`\`\`\`js\n${err.stack}\`\`\``);
+    errweb.send(`\`\`\`js\n${err.stack}\`\`\``);
 });
 process.on("beforeExit", (code) => {
-  errweb.send(`\`\`\`js\n${code}\`\`\``);
+    errweb.send(`\`\`\`js\n${code}\`\`\``);
 });
 process.on("exit", (code) => {
-  errweb.send(`\`\`\`js\n${code}\`\`\``);
+    errweb.send(`\`\`\`js\n${code}\`\`\``);
 });
 process.on("multipleResolves", (type, promise, reason) => { });

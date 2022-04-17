@@ -190,22 +190,20 @@ module.exports = {
             message.mentions.members.forEach((member) => {
                 if (!member.roles.cache.get(role.id)) {
                     member.roles.add(role, message.author.tag) &&
-                        mem.push(member.user.tag) && count++;
+                        count++;
                 }
             });
-            setTimeout(function () {
-                message.channel.send({
-                    embeds: [
-                        new MessageEmbed()
-                            .setColor(client.embed.cr)
-                            .setDescription(
-                                `${client.emoji.success}| Added ${role.name} to ${args.splice(1).join(", ")}`
-                            )
-                    ]
-                });
-                count = 0;
-                db.delete(name + message.guild.id);
-            }, count + "000");
+            message.reply({
+                embeds: [
+                    new MessageEmbed()
+                        .setColor(client.embed.cr)
+                        .setDescription(
+                            `${client.emoji.success}| Added ${role.name} to ${args.splice(1).join(", ")}`
+                        )
+                ]
+            });
+            count = 0;
+            db.delete(name + message.guild.id);
         }
     },
 };

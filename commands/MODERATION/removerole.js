@@ -186,20 +186,18 @@ module.exports = {
             db.set(name + message.guild.id, true);
             message.mentions.members.forEach(member => {
                 if (member.roles.cache.get(role.id)) {
-                    member.roles.remove(role, message.author.tag) && mem.push(member.tag) && count++;
+                    member.roles.remove(role, message.author.tag) && count++;
                 }
             });
-            setTimeout(function () {
-                message.reply({
-                    embeds: [
-                        new MessageEmbed()
-                            .setColor(client.embed.cr)
-                            .setDescription(`${client.emoji.success}| Removed \`${role.name}\` from ${args.splice(1).join(", ")}`)
-                    ]
-                });
-                count = 0;
-                db.delete(name + message.guild.id);
-            }, count + "000");
+            message.reply({
+                embeds: [
+                    new MessageEmbed()
+                        .setColor(client.embed.cr)
+                        .setDescription(`${client.emoji.success}| Removed \`${role.name}\` from ${args.splice(1).join(", ")}`)
+                ]
+            });
+            count = 0;
+            db.delete(name + message.guild.id);
         }
     }
 };

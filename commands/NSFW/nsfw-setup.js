@@ -9,8 +9,39 @@ module.exports = {
     botPermissions: ["EMBED_LINKS"],
 
     async run(client, message, args) {
+
+        if (!args[0]) {
+            return message.reply({
+                embeds: [
+                    new MessageEmbed({
+                        description: `${client.emoji.fail}| You Forgot to provide the channel!`,
+                        color: client.embed.cf
+                    })
+                ]
+            })
+        }
+
         let nsfwChan = message.mentions.channels.first() ||
             message.guild.channels.cache.get(args[0]);
+
+        if (!nsfwChan) {
+            return message.reply({
+                embeds: [
+                    new MessageEmbed({
+                        description: `${client.emoji.fail}| provide a valid channel!`,
+                        color: client.embed.cf
+                    })
+                ]
+            })
+        }
+        if (!message.guild.me.permissionsIn(nsfwChan).has("EMBED_LINKS", "SEND_MESSAGES", "VIEW_CHANNELS")) {
+            return message.reply({
+                embeds: [
+                    `${client.emoji.fail}| I NEED **\`"EMBED_LINKS", "SEND_MESSAGES", "VIEW_CHANNELS"\`** PERMISSIONS IN <#${chan.id}> FIRST TO EXECUTE THIS COMMAND!!`
+                ]
+            })
+        }
+
 
         if (!nsfwChan.nsfw) {
             return message.reply({
@@ -22,21 +53,6 @@ module.exports = {
                 ]
             })
         }
-        let perms = ["EMBED_LINKS", "SEND_MESSAGES", "VIEW_CHANNELS"],
-            r = false;
-        perms.forEach(perm => {
-            if (!message.guild.me.permissionsIn(nsfwChan).has(perms)) {
-                return (
-                    r = true &&
-                    message.reply({
-                        embeds: [
-                            `${client.emoji.fail}| I NEED **\`${perms}\`** PERMISSION IN <#${chan.id}> FIRST TO EXECUTE THIS COMMAND!!`
-                        ]
-                    }).then((m) => m.delete({ timeout: 3000 }))
-                )
-            }
-        })
-        if (r === true) return;
         let options = [],
             option0 = { label: 'Hentai Ass', value: '0' },
             option1 = { label: 'Hentai Anal', value: '1' },

@@ -23,7 +23,7 @@ module.exports = {
             damon = await client.users.fetch(client.config.damon_id)
         }
 
-        let pages = 13,
+        let pages = 16,
             em0 = new MessageEmbed()
                 .setTitle(`${client.user.username} Help Menu`)
                 .setColor(client.embed.cm)
@@ -39,7 +39,7 @@ module.exports = {
                     `• Type \`${p}help <command | module>\` for more info.`
                 )
                 .addField(
-                    "━━━━━━━━━━━━━━━━━",
+                    "MAIN COMMANDS",
                     "**" +
                     client.emoji.extra + "Useful\n" +
                     client.emoji.channels + "Channels\n" +
@@ -54,8 +54,14 @@ module.exports = {
                     client.emoji.image + "Avatar\n" +
                     client.emoji.uptime + "Roles\n" +
                     client.emoji.auto + "Automoderation\n" +
-                    client.emoji.tourney + "Tournament" +
-                    "\n━━━━━━━━━━━━━━━━━**"
+                    client.emoji.tourney + "Tournament**", true
+                )
+                .addField(
+                    'NSFW COMMANDS', '**' +
+                    client.emoji.servers + 'Hentai\n' +
+                    client.emoji.image + 'Neko\n' +
+                    client.emoji.extra + 'Porn**',
+                    true
                 )
                 .setImage(client.gif.main),
             em1 = new MessageEmbed()
@@ -369,27 +375,105 @@ module.exports = {
                     p +
                     "unignore role <@role | role_id>` - to remove the role from ignored list\n`" +
                     p +
-                    "unignore channel <#channel | channel_id>` - to remove any channel from ignored list"
+                    "unignore channel <#channel | channel_id>` - to remove any channel from ignored list" +
+                    "\n**━━━━━━━━━━━━━━━━━**"
                 )
                 .setImage(client.gif.automod),
-          em13 = new MessageEmbed()
-            .setColor(client.embed.cm)
-      .setFooter({
-        text: message.author.tag + " : Page 13/" + pages,
-        iconURL: message.author.displayAvatarURL({ dynamic: true })
-      })
-      .setDescription("**THESE COMMAND REQUIRES MANAGE ROLES PERMISSION BECAUSE THEY WILL ADD ROLE TO MEMBERS AFTER VERIFICATION THAT YOU PROVIDE**")
-      .addField(
-        "TOURNAMENT MANAGER" +
-        "\n━━━━━━━━━━━━━━━━━",
-        "`" +
-        p + "tourney/t <setup|show|active|delete>` - to setup a new tourney get details about tourney and delete the tourney\n`" +
-        p + "tourney/t` - to get more details \n`" +
-        p + "tourney-ss/ts <setup|show|active|delete>` - to setup a new tourney get details about tourney and delete the tourney\n**This tourney helps you get ss registeration from the users**\n`" +
-        p + "tourney-ss/ts` - to get more details\n" + "\n**━━━━━━━━━━━━━━━━━**"
-      )
-      .setImage(client.gif.tourney);
-
+            em13 = new MessageEmbed()
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: message.author.tag + " : Page 13/" + pages,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .setDescription("**THESE COMMAND REQUIRES MANAGE ROLES PERMISSION BECAUSE THEY WILL ADD ROLE TO MEMBERS AFTER VERIFICATION THAT YOU PROVIDE**")
+                .addField(
+                    "TOURNAMENT MANAGER" +
+                    "\n━━━━━━━━━━━━━━━━━",
+                    "`" +
+                    p + "tourney/t <setup|show|active|delete>` - to setup a new tourney get details about tourney and delete the tourney\n`" +
+                    p + "tourney/t` - to get more details \n`" +
+                    p + "tourney-ss/ts <setup|show|active|delete>` - to setup a new tourney get details about tourney and delete the tourney\n**This tourney helps you get ss registeration from the users**\n`" +
+                    p + "tourney-ss/ts` - to get more details\n" + "\n**━━━━━━━━━━━━━━━━━**"
+                )
+                .setImage(client.gif.tourney),
+            em14 = new MessageEmbed()
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: message.author.tag + " : Page 14/" + pages,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .addField(
+                    "HENTAI COMMANDS", + "**━━━━━━━━━━━━━━━━━**" +
+                    "1. " +
+                    prefix +
+                    "hentai <midriff/riff>\n2. " +
+                    prefix +
+                    "hentai <anal>\n3. " +
+                    prefix +
+                    "hentai <ass>\n4. " +
+                    prefix +
+                    "hentai <random>\n5. " +
+                    prefix +
+                    "hentai <pussy>\n6. " +
+                    prefix +
+                    "hentai <thigh>" + "\n**━━━━━━━━━━━━━━━━━**"
+                ),
+            em15 = new MessageEmbed()
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: message.author.tag + " : Page 17/" + pages,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .addField(
+                    "NEKO COMMANDS", + "**━━━━━━━━━━━━━━━━━**" +
+                    "1. " +
+                    prefix +
+                    "neko <boobs/boob>\n2. " +
+                    prefix +
+                    "neko <nero>\n3. " +
+                    prefix +
+                    "neko <feet>\n4. " +
+                    prefix +
+                    "neko <lewd>\n5. " +
+                    prefix +
+                    "neko <pussy>\n6. " +
+                    prefix +
+                    "neko <solo>\n7. " +
+                    prefix +
+                    "neko <blowjob/bj>\n8. " +
+                    prefix +
+                    "neko <cumart>\n9. " +
+                    prefix +
+                    "neko <cumslit/cs>\n10. " +
+                    prefix +
+                    "neko <futanari>\n11. " +
+                    prefix +
+                    "neko <lesbian/lesbo>" + "\n**━━━━━━━━━━━━━━━━━**"
+                ),
+            em16 = new MessageEmbed()
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: message.author.tag + " : Page 16/" + pages,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .addField(
+                    "TEEN PORN COMMANDS", + "**━━━━━━━━━━━━━━━━━**" +
+                    "1. " +
+                    prefix +
+                    "porn <anal>\n2. " +
+                    prefix +
+                    "porn <ass>\n3. " +
+                    prefix +
+                    "porn <boob/boobs>\n4. " +
+                    prefix +
+                    "porn <4k>\n5. " +
+                    prefix +
+                    "porn <pussy>\n6. " +
+                    prefix +
+                    "porn <gif>\n7. " +
+                    prefix +
+                    "porn <thigh>" + "\n**━━━━━━━━━━━━━━━━━**"
+                )
 
         if (arg[0]) {
             let command = client.commands.get(arg[0]);
@@ -477,9 +561,18 @@ module.exports = {
             option10 = { label: 'Avatars', value: '10', emoji: client.emoji.image_id },
             option11 = { label: 'Roles', value: '11', emoji: client.emoji.uptime_id },
             option12 = { label: 'Automoderation', value: '12', emoji: client.emoji.auto_id },
-            option13 = { label: 'Tournament', value: '13', emoji: client.emoji.tourney_id }
+            option13 = { label: 'Tournament', value: '13', emoji: client.emoji.tourney_id },
+            option14 = { label: 'Hentai', value: '14', emoji: client.emoji.extra_id },
+            option15 = { label: 'Neko', value: '15', emoji: client.emoji.image_id },
+            option16 = { label: 'Porn', value: '16', emoji: client.emoji.servers_id }
 
-        options.push(option0, option1, option2, option3, option4, option5, option6, option7, option8, option9, option10, option11, option12, option13)
+        options.push(
+            option0, option1, option2, option3, option4,
+            option5, option6, option7, option8, option9,
+            option10, option11, option12, option13, option14,
+            option15, option16
+        );
+
         let menu = new MessageSelectMenu()
             .setPlaceholder('Select Command Category')
             .setCustomId('pagMenu')
@@ -501,7 +594,7 @@ module.exports = {
                 allowedMentions: { repliedUser: false }
             }),
             collector = helpMessage.createMessageComponentCollector({ time: 90000 }),
-            embeds = [em0, em1, em2, em3, em4, em5, em6, em7, em8, em9, em10, em11, em12, em13]
+            embeds = [em0, em1, em2, em3, em4, em5, em6, em7, em8, em9, em10, em11, em12, em13, em14, em15, em16]
 
         for (let i = 0; i < 0; i++) embeds.push(new MessageEmbed().setColor(client.embed.cm).setFooter(i))
 

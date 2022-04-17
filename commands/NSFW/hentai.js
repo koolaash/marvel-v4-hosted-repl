@@ -14,10 +14,10 @@ module.exports = {
   async run(client, message, args) {
 
     if (!message.channel.nsfw) {
-      return message.reply(client.emoji.fail + "| This channel dosen't support nsfw content");
+      return message.reply(`${client.emoji.fail}| This channel dosen't support nsfw content`);
     }
 
-    let prefix = db.get("guildPrefix_" + message.guild.id);
+    let prefix = db.get(`guildPrefix_${message.guild.id}`);
     if (!prefix) {
       prefix = client.config.pprefix;
     }

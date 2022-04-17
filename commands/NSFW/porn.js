@@ -21,7 +21,7 @@ module.exports = {
       prefix = client.config.pprefix;
     }
     const embed = new MessageEmbed()
-      .setColor("RED")
+      .setColor(client.embed.cm)
       .setTimestamp()
       .setFooter({
         text: message.author.tag,
@@ -99,7 +99,7 @@ module.exports = {
               prefix +
               "porn <gif>"
             )
-            .setColor("GREEN")
+            .setColor(client.embed.cf)
             .setFooter("<> are not required")
         ]
       });

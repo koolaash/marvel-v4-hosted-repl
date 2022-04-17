@@ -24,10 +24,10 @@ module.exports = {
     const embed = new MessageEmbed()
       .setColor(client.embed.cm)
       .setTimestamp()
-      .setFooter(
-        message.author.username,
-        message.author.displayAvatarURL({ dynamic: true })
-      )
+      .setFooter({
+        text: message.author.username,
+        iconURL: message.author.displayAvatarURL({ dynamic: true })
+      })
       .setTimestamp((message.timestamp = Date.now()));
     if (args[0] === "boobs" || args[0] === "boob") {
       const image = await nsfw.nekotits();

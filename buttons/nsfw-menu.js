@@ -19,13 +19,10 @@ module.exports = function (client) {
         if (!interaction.isSelectMenu()) return;
         let button = interaction;
         if (button.message.author.id !== client.user.id) return;
-        if (!button.channel.nsfw) {
-            return button.reply({ content: 'This channel is not **`NSFW`** marked!', ephemeral: true })
-        }
-        if (!button.guild.me.permissionsIn(button.channel).has(["EMBED_LINKS"])) {
-            return button.reply({ content: 'I need **`"EMBED_LINKS"`** permissions first', ephemeral: true })
-        }
         if (button.customId === 'nsfwPage') {
+            if (!button.channel.nsfw) {
+                return button.reply({ content: 'This channel is not **`NSFW`** marked!', ephemeral: true })
+            }
             let choice = button.values[0]
             if (choice === '0') {
                 const image = await nsfw.hentaiass();

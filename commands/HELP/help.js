@@ -411,6 +411,7 @@ module.exports = {
                     text: message.author.tag + " : Page 14/" + pages,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
+                .setImage(client.gif.nsfw)
                 .addField(
                     "HENTAI COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "1. " +
@@ -433,6 +434,7 @@ module.exports = {
                     text: message.author.tag + " : Page 17/" + pages,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
+                .setImage(client.gif.nsfw)
                 .addField(
                     "NEKO COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "1. " +
@@ -465,6 +467,7 @@ module.exports = {
                     text: message.author.tag + " : Page 16/" + pages,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
+                .setImage(client.gif.nsfw)
                 .addField(
                     "TEEN PORN COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "1. " +

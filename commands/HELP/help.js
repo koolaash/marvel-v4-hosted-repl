@@ -66,10 +66,9 @@ module.exports = {
                 )
                 .addField(
                     'FUN COMMANDS', '**' +
-                    client.emoji.servers + 'Actions\n' +
-                    client.emoji.image + 'Image Filter\n' +
-                    client.emoji.extra + 'Image Manipulation\n**',
-                    client.emoji.ping + 'Others',
+                    client.emoji.extra + 'Actions\n' +
+                    client.emoji.image + 'Image, Filter and Manipulation\n' +
+                    client.emoji.ping + 'Fun**',
                     true
                 )
                 .setImage(client.gif.main),

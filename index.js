@@ -78,6 +78,7 @@ process.setMaxListeners(100);
 
 require('./alive.js');
 require('./buttons/ticketing.js')(client);
+require('./buttons/nsfw-menu.js')(client);
 require("./events2/snipe.js")(client);
 require("./events2/autorole.js")(client);
 require("./events2/embedwel.js")(client);

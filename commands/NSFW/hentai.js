@@ -6,6 +6,7 @@ const { MessageEmbed } = require("discord.js"),
 
 module.exports = {
   name: "hentai",
+  usage: `hentai <type>`,
   aliases: ["h"],
   description: "shows help menu for the bot",
   userPermissions: [],

@@ -46,10 +46,7 @@ module.exports = {
                         r = true &&
                         message.reply({
                             embeds: [
-                                client.emoji.fail +
-                                "| I NEED **`" +
-                                perms +
-                                "`** PERMISSION IN <#" + chan.id + "> FIRST TO EXECUTE THIS COMMAND!!"
+                                `${client.emoji.fail}| I NEED **\`${perms}\`** PERMISSION IN <#${chan.id}> FIRST TO EXECUTE THIS COMMAND!!`
                             ]
                         }).then((m) => m.delete({ timeout: 3000 }))
                     )

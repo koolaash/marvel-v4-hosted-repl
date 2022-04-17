@@ -1,4 +1,4 @@
-const { MessageEmbed, MessageButton, MessageActionRow, ButtonInteraction, Interaction } = require("discord.js"),
+const { MessageEmbed, MessageButton, MessageActionRow } = require("discord.js"),
     db = require("quick.db"),
     discord = require("discord.js");
 

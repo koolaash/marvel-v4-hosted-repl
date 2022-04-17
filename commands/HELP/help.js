@@ -412,7 +412,7 @@ module.exports = {
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
-                    "HENTAI COMMANDS", + "**━━━━━━━━━━━━━━━━━**" +
+                    "HENTAI COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "1. " +
                     prefix +
                     "hentai <midriff/riff>\n2. " +
@@ -434,7 +434,7 @@ module.exports = {
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
-                    "NEKO COMMANDS", + "**━━━━━━━━━━━━━━━━━**" +
+                    "NEKO COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "1. " +
                     prefix +
                     "neko <boobs/boob>\n2. " +
@@ -466,7 +466,7 @@ module.exports = {
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
-                    "TEEN PORN COMMANDS", + "**━━━━━━━━━━━━━━━━━**" +
+                    "TEEN PORN COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "1. " +
                     prefix +
                     "porn <anal>\n2. " +

@@ -5,6 +5,7 @@ const { MessageEmbed } = require("discord.js"),
 module.exports = {
   name: "porn",
   aliases: ["p"],
+  usage: `porn <type>`,
   description: "shows help menu for the bot",
   userPermissions: [],
   botPermissions: ["EMBED_LINKS"],

@@ -6,6 +6,7 @@ const { MessageEmbed } = require("discord.js"),
 
 module.exports = {
   name: "neko",
+  usage: `neko <type>`,
   aliases: ["n"],
   description: "shows help menu for the bot",
   userPermissions: [],

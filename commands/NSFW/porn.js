@@ -1,5 +1,4 @@
-const discord = require("discord.js"),
-  { MessageEmbed } = require("discord.js"),
+const { MessageEmbed } = require("discord.js"),
   NSFW = require("discord-nsfw"),
   nsfw = new NSFW();
 
@@ -11,16 +10,15 @@ module.exports = {
   botPermissions: ["EMBED_LINKS"],
 
   async run(client, message, args) {
-    const { defprefix, binvite, sserver } = client.config;
 
     if (!message.channel.nsfw) {
-      return message.reply(client.emoji.fail + "| This channel dosen't support nsfw content");
+      return message.reply(`${client.emoji.fail}| This channel dosen't support nsfw content`);
     }
 
-    let prefix = await client.qdb.get("guildPrefix_" + message.guild.id);
+    let prefix = await client.qdb.get(`guildPrefix_${message.guild.id}`);
 
     if (!prefix) {
-      prefix = defprefix;
+      prefix = client.config.pprefix;
     }
     const embed = new MessageEmbed()
       .setColor("RED")

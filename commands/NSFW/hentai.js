@@ -1,5 +1,4 @@
-const discord = require("discord.js"),
-  { MessageEmbed } = require("discord.js"),
+const { MessageEmbed } = require("discord.js"),
   NSFW = require("discord-nsfw"),
   nsfw = new NSFW(),
   superagent = require('superagent'),
@@ -13,7 +12,6 @@ module.exports = {
   botPermissions: ["EMBED_LINKS"],
 
   async run(client, message, args) {
-    const { defprefix, binvite, sserver } = client.config;
 
     if (!message.channel.nsfw) {
       return message.reply(client.emoji.fail + "| This channel dosen't support nsfw content");
@@ -21,11 +19,11 @@ module.exports = {
 
     let prefix = db.get("guildPrefix_" + message.guild.id);
     if (!prefix) {
-      prefix = defprefix;
+      prefix = client.config.pprefix;
     }
 
     const embed = new MessageEmbed()
-      .setColor("RED")
+      .setColor(client.embed.cm)
       .setTimestamp()
       .setFooter({
         text: message.author.tag,
@@ -65,36 +63,49 @@ module.exports = {
       embed.setTitle("Hentai Anal");
       embed.setImage(body.url);
       return message.channel.send({ embeds: [embed] });
-    } else if (args[0] || !args[0]) {
-      return message.channel.send(
-        new MessageEmbed()
-          .setTitle("CATEGORY HENTAI")
-          .addField(
-            "USAGE : ",
-            "Aliases : `hentai , h`" +
-            "\nUsage : `" +
-            prefix +
-            "hentai <type> or " +
-            prefix +
-            "h <type>`"
-          )
-          .addField(
-            "HENTAI COMMANDS",
-            "1. " +
-            prefix +
-            "hentai <midriff/riff>\n2. " +
-            prefix +
-            "hentai <anal>\n3. " +
-            prefix +
-            "hentai <ass>\n4. " +
-            prefix +
-            "hentai <random>\n5. " +
-            prefix +
-            "hentai <thigh>"
-          )
-          .setColor("GREEN")
-          .setFooter("<> are not required")
+    } else if (args[0] === "boob" || args[0] === "boobs") {
+      const { body } = await superagent.get(
+        "https://nekos.life/api/v2/img/boobs"
       );
+      embed.setTitle("Hentai Boobs");
+      embed.setImage(body.url);
+      return message.channel.send({ embeds: [embed] });
+    } else if (args[0] || !args[0]) {
+      return message.channel.send({
+        embeds: [
+          new MessageEmbed()
+            .setTitle("CATEGORY HENTAI")
+            .addField(
+              "USAGE : ",
+              "Aliases : `hentai , h`" +
+              "\nUsage : `" +
+              prefix +
+              "hentai <type> or " +
+              prefix +
+              "h <type>`"
+            )
+            .addField(
+              "HENTAI COMMANDS",
+              "1. " +
+              prefix +
+              "hentai <midriff/riff>\n2. " +
+              prefix +
+              "hentai <anal>\n3. " +
+              prefix +
+              "hentai <ass>\n4. " +
+              prefix +
+              "hentai <random>\n5. " +
+              prefix +
+              "hentai <thigh>\n6." +
+              prefix +
+              "hentai <boob>\n7." +
+              prefix +
+              "hentai <pussy>"
+            )
+            .setColor(client.embed.cf)
+            .setFooter("<> are not required")
+        ]
+      });
     }
   }
 };

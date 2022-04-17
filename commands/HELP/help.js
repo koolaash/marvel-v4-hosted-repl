@@ -107,7 +107,7 @@ module.exports = {
             em2 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 2/" + pages,
+                    text: `${message.author.tag} : Page 2/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
@@ -129,7 +129,7 @@ module.exports = {
             em3 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 3/" + pages,
+                    text: `${message.author.tag} : Page 3/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
@@ -151,7 +151,7 @@ module.exports = {
             em4 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 4/" + pages,
+                    text: `${message.author.tag} : Page 4/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .setImage(client.gif.afk)
@@ -163,7 +163,7 @@ module.exports = {
             em5 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 5/" + pages,
+                    text: `${message.author.tag} : Page 5/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 }).setImage(client.gif.embeds)
                 .addField(
@@ -179,7 +179,7 @@ module.exports = {
             em6 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 6/" + pages,
+                    text: `${message.author.tag} : Page 6/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .setImage(client.gif.welcomer)
@@ -197,7 +197,7 @@ module.exports = {
             em7 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 7/" + pages,
+                    text: `${message.author.tag} : Page 7/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
@@ -215,7 +215,7 @@ module.exports = {
             em8 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 8/" + pages,
+                    text: `${message.author.tag} : Page 8/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
@@ -252,7 +252,7 @@ module.exports = {
             em9 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 9/" + pages,
+                    text: `${message.author.tag} : Page 9/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
@@ -298,7 +298,7 @@ module.exports = {
             em10 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 10/" + pages,
+                    text: `${message.author.tag} : Page 10/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
@@ -318,7 +318,7 @@ module.exports = {
             em11 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 11/" + pages,
+                    text: `${message.author.tag} : Page 11/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
@@ -353,7 +353,7 @@ module.exports = {
             em12 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 12/" + pages,
+                    text: `${message.author.tag} : Page 12/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
@@ -391,7 +391,7 @@ module.exports = {
             em13 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 13/" + pages,
+                    text: `${message.author.tag} : Page 13/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .setDescription("**THESE COMMAND REQUIRES MANAGE ROLES PERMISSION BECAUSE THEY WILL ADD ROLE TO MEMBERS AFTER VERIFICATION THAT YOU PROVIDE**")

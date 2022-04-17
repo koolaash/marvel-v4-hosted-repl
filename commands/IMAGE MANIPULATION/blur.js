@@ -8,7 +8,7 @@ module.exports = {
     description: `Edits your image with ${nam}`,
     usage: `${nam} blur <amount> || \`${nam} blur <image_link> <amount>\``,
     userPermissions: [],
-    botPermissions: ["EMBED_LINKS"],
+    botPermissions: ["ATTACH_FILES"],
 
     run: async (client, message, args) => {
 
@@ -25,7 +25,7 @@ module.exports = {
                             color: client.embed.cf
                         })
                     ]
-                })
+                });
             }
         }
 
@@ -37,11 +37,11 @@ module.exports = {
                         color: client.embed.cf
                     })
                 ]
-            })
+            });
         }
 
         let output = await new DIG.Blur().getImage(img, amt),
             attach = new Discord.MessageAttachment(output, "blur.png");
-        message.reply({ files: [attach] });
+        return message.reply({ files: [attach] });
     }
 };

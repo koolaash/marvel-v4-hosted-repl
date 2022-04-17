@@ -494,14 +494,14 @@ module.exports = {
                 .setImage(client.gif.action)
                 .addField("ACTIONS" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
-                    p + "baka @user\n" +
-                    p + "cuddle @user\n" +
-                    p + "feed @user\n" +
-                    p + "hug @user\n" +
-                    p + "kiss @user\n" +
-                    p + "pat @user\n" +
-                    p + "slap @user\n" +
-                    p + "tickle @user\n**━━━━━━━━━━━━━━━━━**"
+                    p + "baka @user`\n`" +
+                    p + "cuddle @user`\n`" +
+                    p + "feed @user`\n`" +
+                    p + "hug @user`\n`" +
+                    p + "kiss @user`\n`" +
+                    p + "pat @user`\n`" +
+                    p + "slap @user`\n`" +
+                    p + "tickle @user`\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em18 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -655,9 +655,9 @@ module.exports = {
             option15 = { label: 'Neko', value: '15', emoji: client.emoji.image_id },
             option16 = { label: 'Porn', value: '16', emoji: client.emoji.servers_id },
             option17 = { label: 'Actions', value: '17', emoji: client.emoji.extra_id },
-            option18 = { label: 'Fun', value: '20', emoji: client.emoji.ping_id },
-            option19 = { label: 'Image Filter/Manipulation', value: '19', emoji: client.emoji.image_id },
-            option20 = { label: 'Random Image', value: '18', emoji: client.emoji.image_id }
+            option18 = { label: 'Fun', value: '18', emoji: client.emoji.ping_id },
+            option19 = { label: 'Random Image', value: '19', emoji: client.emoji.image_id },
+            option20 = { label: 'Image Filter/Manipulation', value: '20', emoji: client.emoji.image_id }
 
         options.push(
             option0, option1, option2, option3, option4,

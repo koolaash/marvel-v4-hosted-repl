@@ -84,19 +84,19 @@ module.exports = function (client) {
             }
             if (choice === '13') {
                 const image = await neko.nsfw.cumArts();
-                return button.reply({ content: image, ephemeral: true })
+                return button.reply({ content: image.url, ephemeral: true })
             }
             if (choice === '14') {
                 const image = await neko.nsfw.cumsluts();
-                return button.reply({ content: image, ephemeral: true })
+                return button.reply({ content: image.url, ephemeral: true })
             }
             if (choice === '15') {
                 const image = await neko.nsfw.futanari();
-                return button.reply({ content: image, ephemeral: true })
+                return button.reply({ content: image.url, ephemeral: true })
             }
             if (choice === '16') {
                 const image = await neko.nsfw.lesbian();
-                return button.reply({ content: image, ephemeral: true })
+                return button.reply({ content: image.url, ephemeral: true })
             }
             if (choice === '17') {
                 const image = await nsfw.nekotits();

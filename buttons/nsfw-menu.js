@@ -79,7 +79,7 @@ module.exports = function (client) {
                 return button.reply({ content: image, ephemeral: true })
             }
             if (choice === '12') {
-                const GIF = await neko.nsfw.bJ();
+                const image = await neko.nsfw.bJ();
                 return button.reply({ content: image, ephemeral: true })
             }
             if (choice === '13') {

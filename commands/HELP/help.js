@@ -413,19 +413,19 @@ module.exports = {
                 .setImage(client.gif.nsfw)
                 .addField(
                     "HENTAI COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
-                    "1. " +
+                    "`" +
                     prefix +
-                    "hentai <midriff/riff>\n2. " +
+                    "hentai <midriff/riff>`\n`" +
                     prefix +
-                    "hentai <anal>\n3. " +
+                    "hentai <anal>`\n`" +
                     prefix +
-                    "hentai <ass>\n4. " +
+                    "hentai <ass>`\n`" +
                     prefix +
-                    "hentai <random>\n5. " +
+                    "hentai <random>`\n`" +
                     prefix +
-                    "hentai <pussy>\n6. " +
+                    "hentai <pussy>`\n`" +
                     prefix +
-                    "hentai <thigh>" + "\n**━━━━━━━━━━━━━━━━━**"
+                    "hentai <thigh>" + "`\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em15 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -436,29 +436,29 @@ module.exports = {
                 .setImage(client.gif.nsfw)
                 .addField(
                     "NEKO COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
-                    "1. " +
+                    "`" +
                     prefix +
-                    "neko <boobs/boob>\n2. " +
+                    "neko <boobs/boob>`\n`" +
                     prefix +
-                    "neko <nero>\n3. " +
+                    "neko <nero>`\n`" +
                     prefix +
                     "neko <feet>\n4. " +
                     prefix +
-                    "neko <lewd>\n5. " +
+                    "neko <lewd>`\n`" +
                     prefix +
-                    "neko <pussy>\n6. " +
+                    "neko <pussy>`\n`" +
                     prefix +
-                    "neko <solo>\n7. " +
+                    "neko <solo>`\n`" +
                     prefix +
-                    "neko <blowjob/bj>\n8. " +
+                    "neko <blowjob/bj>`\n`" +
                     prefix +
-                    "neko <cumart>\n9. " +
+                    "neko <cumart>`\n`" +
                     prefix +
-                    "neko <cumslit/cs>\n10. " +
+                    "neko <cumslit/cs>`\n`" +
                     prefix +
-                    "neko <futanari>\n11. " +
+                    "neko <futanari>`\n`" +
                     prefix +
-                    "neko <lesbian/lesbo>" + "\n**━━━━━━━━━━━━━━━━━**"
+                    "neko <lesbian/lesbo>" + "`\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em16 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -469,21 +469,21 @@ module.exports = {
                 .setImage(client.gif.nsfw)
                 .addField(
                     "TEEN PORN COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
-                    "1. " +
+                    "`" +
                     prefix +
-                    "porn <anal>\n2. " +
+                    "porn <anal>`\n`" +
                     prefix +
-                    "porn <ass>\n3. " +
+                    "porn <ass>`\n`" +
                     prefix +
-                    "porn <boob/boobs>\n4. " +
+                    "porn <boob/boobs>`\n`" +
                     prefix +
-                    "porn <4k>\n5. " +
+                    "porn <4k>`\n`" +
                     prefix +
-                    "porn <pussy>\n6. " +
+                    "porn <pussy>`\n`" +
                     prefix +
-                    "porn <gif>\n7. " +
+                    "porn <gif>`\n`" +
                     prefix +
-                    "porn <thigh>" + "\n**━━━━━━━━━━━━━━━━━**"
+                    "porn <thigh>" + "`\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em17 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -491,7 +491,7 @@ module.exports = {
                     text: `${message.author.tag} : Page 17/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
-                .setImage(client.gif.action)
+                .setImage(client.gif.fun)
                 .addField("ACTIONS" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
                     p + "baka @user`\n`" +

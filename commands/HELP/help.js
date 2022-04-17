@@ -23,7 +23,7 @@ module.exports = {
             damon = await client.users.fetch(client.config.damon_id)
         }
 
-        let pages = 16,
+        let pages = 20,
             em0 = new MessageEmbed()
                 .setTitle(`${client.user.username} Help Menu`)
                 .setColor(client.embed.cm)
@@ -60,7 +60,16 @@ module.exports = {
                     'NSFW COMMANDS', '**' +
                     client.emoji.servers + 'Hentai\n' +
                     client.emoji.image + 'Neko\n' +
-                    client.emoji.extra + 'Porn**',
+                    client.emoji.extra + 'Porn\n' +
+                    client.emoji.channels + " " + p + 'nsfw-setup for quick commands system**',
+                    true
+                )
+                .addField(
+                    'FUN COMMANDS', '**' +
+                    client.emoji.servers + 'Actions\n' +
+                    client.emoji.image + 'Image Filter\n' +
+                    client.emoji.extra + 'Image Manipulation\n**',
+                    client.emoji.ping + 'Others',
                     true
                 )
                 .setImage(client.gif.main),

@@ -408,7 +408,7 @@ module.exports = {
             em14 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 14/" + pages,
+                    text: `${message.author.tag} : Page 14/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .setImage(client.gif.nsfw)
@@ -431,7 +431,7 @@ module.exports = {
             em15 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 15/" + pages,
+                    text: `${message.author.tag} : Page 15/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .setImage(client.gif.nsfw)
@@ -464,7 +464,7 @@ module.exports = {
             em16 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
-                    text: message.author.tag + " : Page 16/" + pages,
+                    text: `${message.author.tag} : Page 16/${pages}`,
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .setImage(client.gif.nsfw)

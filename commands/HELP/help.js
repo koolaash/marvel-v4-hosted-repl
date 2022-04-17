@@ -484,6 +484,84 @@ module.exports = {
                     "porn <gif>\n7. " +
                     prefix +
                     "porn <thigh>" + "\n**━━━━━━━━━━━━━━━━━**"
+                ),
+            em17 = new MessageEmbed()
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: `${message.author.tag} : Page 17/${pages}`,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .setImage(client.gif.action)
+                .addField("ACTIONS" + "\n━━━━━━━━━━━━━━━━━",
+                    "`" +
+                    p + "baka @user\n" +
+                    p + "cuddle @user\n" +
+                    p + "feed @user\n" +
+                    p + "hug @user\n" +
+                    p + "kiss @user\n" +
+                    p + "pat @user\n" +
+                    p + "slap @user\n" +
+                    p + "tickle @user\n**━━━━━━━━━━━━━━━━━**"
+                ),
+            em18 = new MessageEmbed()
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: `${message.author.tag} : Page 18/${pages}`,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .setImage(client.gif.fun)
+                .addField("ACTIONS" + "\n━━━━━━━━━━━━━━━━━",
+                    "`" +
+                    p + "8ball <text>`\n`" +
+                    p + "ascii <text>`\n`" +
+                    p + "emojify <text>`\n`" +
+                    p + "hug @user`\n`" +
+                    p + "hack @user`\n`" +
+                    p + "howgay @user`\n**━━━━━━━━━━━━━━━━━**"
+                ),
+            em19 = new MessageEmbed()
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: `${message.author.tag} : Page 19/${pages}`,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .setImage(client.gif.fun)
+                .addField("IMAGE" + "\n━━━━━━━━━━━━━━━━━",
+                    "`" +
+                    p + "cat`\n`" +
+                    p + "dog`\n`" +
+                    p + "foxgirf`\n`" +
+                    p + "gecg`\n`" +
+                    p + "goose`\n`" +
+                    p + "holo`\n`" +
+                    p + "lizard`\n`" +
+                    p + "mimi`\n`" +
+                    p + "nitro`\n`" +
+                    p + "waifu`\n`" +
+                    p + "wallpaper`\n**━━━━━━━━━━━━━━━━━**"
+                ),
+            em20 = new MessageEmbed()
+                .setColor(client.embed.cm)
+                .setFooter({
+                    text: `${message.author.tag} : Page 20/${pages}`,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                })
+                .setImage(client.gif.fun)
+                .addField("IMAGE MANIPULATION" + "\n━━━━━━━━━━━━━━━━━",
+                    "`" +
+                    p + "affetc [@user] `\n`" +
+                    p + "beautiful [@user] `\n`" +
+                    p + "blur - use blur link_of_image amout_in_number or blur amount_in_number`\n`" +
+                    p + "catsay <text> `\n`" +
+                    p + "dcblack [@user] `\n`" +
+                    p + "dcblue [@user] `\n`" +
+                    p + "delete [@user] `\n`" +
+                    p + "facepalm [@user] `\n`" +
+                    p + "hitler [@user] `\n`" +
+                    p + "jail [@user] `\n`" +
+                    p + "rip [@user] `\n`" +
+                    p + "trash [@user] `\n`" +
+                    p + "trigger [@user] `\n**━━━━━━━━━━━━━━━━━**"
                 )
 
         if (arg[0]) {
@@ -575,13 +653,18 @@ module.exports = {
             option13 = { label: 'Tournament', value: '13', emoji: client.emoji.tourney_id },
             option14 = { label: 'Hentai', value: '14', emoji: client.emoji.extra_id },
             option15 = { label: 'Neko', value: '15', emoji: client.emoji.image_id },
-            option16 = { label: 'Porn', value: '16', emoji: client.emoji.servers_id }
+            option16 = { label: 'Porn', value: '16', emoji: client.emoji.servers_id },
+            option17 = { label: 'Actions', value: '17', emoji: client.emoji.extra_id },
+            option18 = { label: 'Random Image', value: '18', emoji: client.emoji.image_id },
+            option19 = { label: 'Image Filter/Manipulation', value: '19', emoji: client.emoji.image_id },
+            option20 = { label: 'Fun', value: '20', emoji: client.emoji.ping_id }
 
         options.push(
             option0, option1, option2, option3, option4,
             option5, option6, option7, option8, option9,
             option10, option11, option12, option13, option14,
-            option15, option16
+            option15, option16, option17, option18, option19,
+            option20
         );
 
         let menu = new MessageSelectMenu()
@@ -605,7 +688,11 @@ module.exports = {
                 allowedMentions: { repliedUser: false }
             }),
             collector = helpMessage.createMessageComponentCollector({ time: 90000 }),
-            embeds = [em0, em1, em2, em3, em4, em5, em6, em7, em8, em9, em10, em11, em12, em13, em14, em15, em16]
+            embeds = [
+                em0, em1, em2, em3, em4, em5, em6, em7,
+                em8, em9, em10, em11, em12, em13, em14,
+                em15, em16, em17, em18, em19, em20
+            ]
 
         for (let i = 0; i < 0; i++) embeds.push(new MessageEmbed().setColor(client.embed.cm).setFooter(i))
 

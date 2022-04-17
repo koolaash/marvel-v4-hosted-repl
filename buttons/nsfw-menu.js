@@ -80,7 +80,7 @@ module.exports = function (client) {
             }
             if (choice === '12') {
                 const image = await neko.nsfw.bJ();
-                return button.reply({ content: image, ephemeral: true })
+                return button.reply({ content: image.url, ephemeral: true })
             }
             if (choice === '13') {
                 const image = await neko.nsfw.cumArts();

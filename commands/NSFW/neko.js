@@ -24,7 +24,6 @@ module.exports = {
     }
     const embed = new MessageEmbed()
       .setColor(client.embed.cm)
-      .setTimestamp()
       .setFooter({
         text: message.author.username,
         iconURL: message.author.displayAvatarURL({ dynamic: true })

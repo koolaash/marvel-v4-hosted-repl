@@ -75,6 +75,7 @@ process.setMaxListeners(100);
     require(`./handlers/${handler}`)(client);
 });
 
+require('./alive.js');
 require('./buttons/ticketing.js')(client);
 require("./events2/snipe.js")(client);
 require("./events2/autorole.js")(client);

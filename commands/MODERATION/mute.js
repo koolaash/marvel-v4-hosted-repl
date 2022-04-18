@@ -7,8 +7,8 @@ module.exports = {
     desciption: "helps you mute a user",
     category: "MODERATION",
     usage: "mute <@user | username | userid> <time> [reason]",
-    userPermissions: ["BAN_MEMBERS"],
-    botPermissions: ["EMBED_LINKS", "BAN_MEMBERS"],
+    userPermissions: ["MODERATE_MEMBERS"],
+    botPermissions: ["EMBED_LINKS", "MODERATE_MEMBERS"],
 
     async run(client, message, args) {
         if (!args[0]) {
@@ -97,7 +97,7 @@ module.exports = {
                 })
             }
         }
-        if (kickMember.user.permissionsIn(message.channel).has("ADMINISTRATOR")) {
+        if (kickMember.permissionsIn(message.channel).has("ADMINISTRATOR")) {
             return message.reply({
                 embeds: [
                     new MessageEmbed({
@@ -107,7 +107,7 @@ module.exports = {
                 ]
             })
         }
-        let time = ms('1w')
+        let time = ms('4w')
         if (args[1]) {
             time = ms(args[1]);
         }
@@ -129,7 +129,7 @@ module.exports = {
             return message.reply({
                 embeds: [
                     new MessageEmbed({
-                        description: `${client.emoji.fail} | Please provide time for the timeout 10s, 60s, 1m, 10m, 1h, 1d, 1w!`,
+                        description: `${client.emoji.fail} | ${e}!`,
                         color: client.embed.cf
                     })
                 ]

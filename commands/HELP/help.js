@@ -134,8 +134,10 @@ module.exports = {
                 .addField(
                     "MODERATION" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
-                    p + "kick <user> <reason>` - to kick any user from the server\n`" +
-                    p + "ban <user> <reason>` - to ban any user from the server\n`" +
+                    p + "kick <user> [reason]` - to kick any user from the server\n`" +
+                    p + "ban <user> [reason]` - to ban any user from the server\n`" +
+                    p + "mute <user> <time> [reason]` - to mute any user in the server\n`" +
+                    p + "unmute <user> [reason]` - to unmute any user in the server\n`" +
                     p + "addrole` - gives role to someone use command to know more usages\n`" +
                     p + "removerole` - takes role from someone use command to know more usages\n`" +
                     p + "nick <user> <nickname>` - changes nickname of users\n`" +

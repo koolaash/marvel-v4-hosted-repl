@@ -415,17 +415,18 @@ module.exports = {
                     "HENTAI COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "`" +
                     prefix +
-                    "hentai <midriff/riff>`\n`" +
+                    "hentai <midriff/riff>` - get a hentai nsfw image/gif of this category\n`" +
                     prefix +
-                    "hentai <anal>`\n`" +
+                    "hentai <anal>` - get a hentai nsfw image/gif of this category\n`" +
                     prefix +
-                    "hentai <ass>`\n`" +
+                    "hentai <ass>` - get a hentai nsfw image/gif of this category\n`" +
                     prefix +
-                    "hentai <random>`\n`" +
+                    "hentai <random>` - get a hentai nsfw image/gif of this category\n`" +
                     prefix +
-                    "hentai <pussy>`\n`" +
+                    "hentai <pussy>` - get a hentai nsfw image/gif of this category\n`" +
                     prefix +
-                    "hentai <thigh>" + "`\n**━━━━━━━━━━━━━━━━━**"
+                    "hentai <thigh>` - get a hentai nsfw image/gif of this category" +
+                "\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em15 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -438,27 +439,28 @@ module.exports = {
                     "NEKO COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "`" +
                     prefix +
-                    "neko <boobs/boob>`\n`" +
+                    "neko <boobs/boob>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <nero>`\n`" +
+                    "neko <nero>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <feet>`\n`" +
+                    "neko <feet>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <lewd>`\n`" +
+                    "neko <lewd>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <pussy>`\n`" +
+                    "neko <pussy>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <solo>`\n`" +
+                    "neko <solo>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <blowjob/bj>`\n`" +
+                    "neko <blowjob/bj>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <cumart>`\n`" +
+                    "neko <cumart>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <cumslit/cs>`\n`" +
+                    "neko <cumslit/cs>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <futanari>`\n`" +
+                    "neko <futanari>` - get a neko nsfw image/gif of this category\n`" +
                     prefix +
-                    "neko <lesbian/lesbo>" + "`\n**━━━━━━━━━━━━━━━━━**"
+                    "neko <lesbian/lesbo>` - get a neko nsfw image/gif of this category" +
+                "\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em16 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -471,19 +473,19 @@ module.exports = {
                     "TEEN PORN COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "`" +
                     prefix +
-                    "porn <anal>`\n`" +
+                    "porn <anal>` - get a real nsfw image/gif of this category\n`" +
                     prefix +
-                    "porn <ass>`\n`" +
+                    "porn <ass>` - get a real nsfw image/gif of this category\n`" +
                     prefix +
-                    "porn <boob/boobs>`\n`" +
+                    "porn <boob/boobs>` - get a real nsfw image/gif of this category\n`" +
                     prefix +
-                    "porn <4k>`\n`" +
+                    "porn <4k>` - get a real nsfw image/gif of this category\n`" +
                     prefix +
-                    "porn <pussy>`\n`" +
+                    "porn <pussy>` - get a real nsfw image/gif of this category\n`" +
                     prefix +
-                    "porn <gif>`\n`" +
+                    "porn <gif>` - get a real nsfw image/gif of this category\n`" +
                     prefix +
-                    "porn <thigh>" + "`\n**━━━━━━━━━━━━━━━━━**"
+                    "porn <thigh>" + "` - get a real nsfw image/gif of this category\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em17 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -494,14 +496,14 @@ module.exports = {
                 .setImage(client.gif.fun)
                 .addField("ACTIONS" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
-                    p + "baka @user`\n`" +
-                    p + "cuddle @user`\n`" +
-                    p + "feed @user`\n`" +
-                    p + "hug @user`\n`" +
-                    p + "kiss @user`\n`" +
-                    p + "pat @user`\n`" +
-                    p + "slap @user`\n`" +
-                    p + "tickle @user`\n**━━━━━━━━━━━━━━━━━**"
+                    p + "baka @user` - to call someone stupid with gif\n`" +
+                    p + "cuddle @user` - to cuddle with some one and spread love\n`" +
+                    p + "feed @user` - feed the one who's hungry\n`" +
+                    p + "hug @user` - give hugs and spread love\n`" +
+                    p + "kiss @user` - kiss someone and show them how much you love them\n`" +
+                    p + "pat @user` - pat them to calm them down\n`" +
+                    p + "slap @user` - slap them to show you're angry with them\n`" +
+                    p + "tickle @user` - tickle them an spread some giggles\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em18 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -512,12 +514,12 @@ module.exports = {
                 .setImage(client.gif.fun)
                 .addField("FUN" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
-                    p + "8ball <text>`\n`" +
-                    p + "ascii <text>`\n`" +
-                    p + "emojify <text>`\n`" +
-                    p + "hug @user`\n`" +
-                    p + "hack @user`\n`" +
-                    p + "howgay @user`\n**━━━━━━━━━━━━━━━━━**"
+                    p + "8ball <text>` -  check your fortune for your question\n`" +
+                    p + "ascii <text>` - convert something into ascii\n`" +
+                    p + "emojify <text>` - convert some text into emojis\n`" +
+                    p + "fliptext <text>` - flip some text for fun\n`" +
+                    p + "hack @user` - hack someone you wants to\n`" +
+                    p + "howgay @user` - check how much of a gay they are\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em19 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -528,17 +530,17 @@ module.exports = {
                 .setImage(client.gif.fun)
                 .addField("IMAGE" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
-                    p + "cat`\n`" +
-                    p + "dog`\n`" +
-                    p + "foxgirf`\n`" +
-                    p + "gecg`\n`" +
-                    p + "goose`\n`" +
-                    p + "holo`\n`" +
-                    p + "lizard`\n`" +
-                    p + "mimi`\n`" +
-                    p + "nitro`\n`" +
-                    p + "waifu`\n`" +
-                    p + "wallpaper`\n**━━━━━━━━━━━━━━━━━**"
+                    p + "cat` - get a random image of this category\n`" +
+                    p + "dog` - get a random image of this category\n`" +
+                    p + "foxgirf` - get a random image of this category\n`" +
+                    p + "gecg` - get a random image of this category\n`" +
+                    p + "goose` - get a random image of this category\n`" +
+                    p + "holo` - get a random image of this category\n`" +
+                    p + "lizard` - get a random image of this category\n`" +
+                    p + "mimi` - get a random image of this category\n`" +
+                    p + "nitro` - fake someone with nitro\n`" +
+                    p + "waifu` - get a random image of this category\n`" +
+                    p + "wallpaper` - get a random image of this category\n**━━━━━━━━━━━━━━━━━**"
                 ),
             em20 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -549,19 +551,19 @@ module.exports = {
                 .setImage(client.gif.fun)
                 .addField("IMAGE MANIPULATION" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
-                    p + "affetc [@user] `\n`" +
-                    p + "beautiful [@user] `\n`" +
+                    p + "affect [@user]` - it wont affect you XD\n`" +
+                    p + "beautiful [@user]` - oh this, this is beautiful\n`" +
                     p + "blur - use blur link_of_image amout_in_number or blur amount_in_number`\n`" +
-                    p + "catsay <text> `\n`" +
-                    p + "dcblack [@user] `\n`" +
-                    p + "dcblue [@user] `\n`" +
-                    p + "delete [@user] `\n`" +
-                    p + "facepalm [@user] `\n`" +
-                    p + "hitler [@user] `\n`" +
-                    p + "jail [@user] `\n`" +
-                    p + "rip [@user] `\n`" +
-                    p + "trash [@user] `\n`" +
-                    p + "trigger [@user] `\n**━━━━━━━━━━━━━━━━━**"
+                    p + "catsay <text>` - cat says you something\n`" +
+                    p + "dcblack [@user]` - covert you image into dc style with black\n`" +
+                    p + "dcblue [@user]` - covert you image into dc style with blue\n`" +
+                    p + "delete [@user]` - delete some trash or someone\n`" +
+                    p + "facepalm [@user]` - facepalm yourself or someone\n`" +
+                    p + "hitler [@user]` - hitler style LoL\n`" +
+                    p + "jail [@user]` - send someone into jail\n`" +
+                    p + "rip [@user]` - make someone dead and put them into coffin\n`" +
+                    p + "trash [@user]` - convert a image into trash spidy style\n`" +
+                    p + "trigger [@user]`- get a triggered gif of your image\n**━━━━━━━━━━━━━━━━━**"
                 )
 
         if (arg[0]) {

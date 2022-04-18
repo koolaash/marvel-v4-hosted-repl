@@ -13,8 +13,9 @@ module.exports = {
     run: async (client, message, args) => {
         let target = message.mentions.members.first() || message.author,
             mem = message.guild.members.cache.get(target.id),
-            img = mem.user.displayAvatarURL({ size: 2048, format: 'png' }),
-            output = await new DIG.Delete().getImage(img),
+            img = mem.user.displayAvatarURL({ size: 2048, format: 'png' });
+        message.channel.sendTyping();
+        let output = await new DIG.Delete().getImage(img),
             attach = new Discord.MessageAttachment(output, "blur.png");
         return message.reply({ files: [attach] });
     }

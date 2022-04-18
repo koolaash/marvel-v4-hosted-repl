@@ -12,7 +12,8 @@ module.exports = {
         if (!msg) {
             return message.channel.send("What you want the cat to say?");
         }
-        let im = `https://cataas.com/cat/cute/says/${msg}`
+        let im = `https://cataas.com/cat/cute/says/${msg}`;
+        message.channel.sendTyping();
         message.reply({
             files: [
                 {

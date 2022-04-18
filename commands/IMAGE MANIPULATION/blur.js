@@ -39,7 +39,8 @@ module.exports = {
                 ]
             });
         }
-
+        ;
+        message.channel.sendTyping();
         let output = await new DIG.Blur().getImage(img, amt),
             attach = new Discord.MessageAttachment(output, "blur.png");
         return message.reply({ files: [attach] });

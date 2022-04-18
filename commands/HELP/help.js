@@ -442,7 +442,7 @@ module.exports = {
                     prefix +
                     "neko <nero>`\n`" +
                     prefix +
-                    "neko <feet>\n4. " +
+                    "neko <feet>`\n`" +
                     prefix +
                     "neko <lewd>`\n`" +
                     prefix +

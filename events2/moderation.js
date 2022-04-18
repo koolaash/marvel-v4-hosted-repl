@@ -1,6 +1,6 @@
-const { MessageEmbed } = require("discord.js"),
-  db = require("quick.db"),
+const db = require("quick.db"),
   discord = require("discord.js"),
+  ms = require('ms'),
   spam = new discord.Collection();
 
 module.exports = function (client, options) {
@@ -69,7 +69,7 @@ module.exports = function (client, options) {
           message
             .channel.send(`<@${message.author.id}>STOP SPAMMING!`)
             .then((m) => setTimeout(() => m.delete().catch(() => null), 3000))
-          && message.channel.bulkDelete(userFilter)
+          && message.channel.bulkDelete(userFilter) && message.member.timeout(ms('10m'), "Automod").catch(() => null)
         );
       }
       let newNumb = sp + +1;
@@ -88,7 +88,7 @@ module.exports = function (client, options) {
           message
             .channel.send(`<@${message.author.id}>STOP SPAMMING!`)
             .then((m) => setTimeout(() => m.delete().catch(() => null), 3000))
-          && message.channel.bulkDelete(userFilter)
+          && message.channel.bulkDelete(userFilter) && message.member.timeout(ms('10m'), "Automod").catch(() => null)
         );
       }
     }
@@ -99,7 +99,7 @@ module.exports = function (client, options) {
       if (emo !== null) {
         if (emo.length > emojiLimit) {
           return (
-            message.delete() &&
+            message.delete() && message.member.timeout(ms('10m'), "Automod").catch(() => null) &&
             message
               .channel.send(`<@${message.author.id}>Mass Emoji Not Allowed Max Limit Is ${emojiLimit}`)
               .then((m) => setTimeout(() => m.delete().catch(() => null), 3000))
@@ -114,7 +114,7 @@ module.exports = function (client, options) {
       if (caps !== null) {
         if (caps.length > capsLimit) {
           return (
-            message.delete() &&
+            message.delete() && message.member.timeout(ms('10m'), "Automod").catch(() => null) &&
             message
               .channel.send(`<@${message.author.id}>Mass Capitals Not Allowed Max Limit Is ${capsLimit}`)
               .then((m) => setTimeout(() => m.delete().catch(() => null), 3000))
@@ -124,14 +124,14 @@ module.exports = function (client, options) {
     }
     if (roleToggle === true) {
       if (message.mentions.roles.size > roleLimit) {
-        message
+        message.member.timeout(ms('10m'), "Automod").catch(() => null) && message
           .channel.send(`<@${message.author.id}>Mass Mentioning Roles Not Allowed`)
           .then((m) => setTimeout(() => m.delete().catch(() => null), 3000))
       }
     }
     if (userToggle === true) {
       if (message.mentions.roles.size > userLimit) {
-        message
+        message.member.timeout(ms('10m'), "Automod").catch(() => null) && message
           .channel.send(`<@${message.author.id}>Mass Mentioning Members Not Allowed`)
           .then((m) => setTimeout(() => m.delete().catch(() => null), 3000))
       }
@@ -141,7 +141,7 @@ module.exports = function (client, options) {
 
       if (client.links.links.some((word) => msg.includes(word))) {
         return (
-          message.delete() &&
+          message.delete() && message.member.timeout(ms('10m'), "Automod").catch(() => null) &&
           message
             .channel.send(`<@${message.author.id}>Sending links not allowed!`)
             .then((m) => setTimeout(() => m.delete().catch(() => null), 3000))
@@ -165,7 +165,7 @@ module.exports = function (client, options) {
         msgs.some((msg) => {
           if (swears.includes(msg)) {
             return (
-              message.delete() &&
+              message.delete() && message.member.timeout(ms('10m'), "Automod").catch(() => null) &&
               message
                 .channel.send(`<@${message.author.id}>Watch Your Language!`)
                 .then((m) => setTimeout(() => m.delete().catch(() => null), 3000))

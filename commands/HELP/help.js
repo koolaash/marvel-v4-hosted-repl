@@ -473,6 +473,8 @@ module.exports = {
                     "TEEN PORN COMMANDS", "**━━━━━━━━━━━━━━━━━**\n" +
                     "`" +
                     prefix +
+                    "phub ` - get a real nsfw category - use command for more info\n`" +
+                    prefix +
                     "porn <anal>` - get a real nsfw image/gif of this category\n`" +
                     prefix +
                     "porn <ass>` - get a real nsfw image/gif of this category\n`" +

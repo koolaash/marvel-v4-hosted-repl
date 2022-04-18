@@ -1,4 +1,5 @@
-const { MessageEmbed, MessageSelectMenu, MessageActionRow } = require('discord.js');
+const { MessageEmbed, MessageSelectMenu, MessageActionRow } = require('discord.js'),
+    db = require('quick.db');
 
 module.exports = {
     name: "nsfw-setup",
@@ -19,6 +20,24 @@ module.exports = {
                     })
                 ]
             })
+        }
+
+        let ch = db.get(`nsfwSetup_chan${message.guild.id}`),
+            ms = db.get(`nsfwSetup_msg${message.guild.id}`),
+            chann = message.guild.channels.cache.get(ch);
+
+        if (chann) {
+            let nsfwmsg = await chann.messages.fetch(ms).catch(() => null);
+            if (nsfwmsg) {
+                return message.reply({
+                    embeds: [
+                        new MessageEmbed({
+                            description: `${client.emoji.fail}| You already have setup in ${chann}`,
+                            color: client.embed.cf
+                        })
+                    ]
+                })
+            }
         }
 
         let nsfwChan = message.mentions.channels.first() ||
@@ -93,14 +112,25 @@ module.exports = {
             .setMaxValues(1)
             .setMinValues(1),
             embed = new MessageEmbed({
-                description: `${client.emoji.channels}| Select the category you would like to sees!`,
-                color: client.embed.cm
+                description: `Select the category you would like to sees\nMessage can only be seen by you full privacy\nSo no one knows you're horny as fuck XD`,
+                color: client.embed.cm,
+                footer: {
+                    text: 'NSFW IN FEW CLICKS',
+                    iconURL: client.user.displayAvatarURL()
+                },
+                author: {
+                    name: message.guild.name,
+                    iconURL: message.guild.iconURL({ dynamic: true })
+                }
             }),
             group1 = new MessageActionRow().addComponents(menu);
 
-        return nsfwChan.send({
+        let m = await nsfwChan.send({
             embeds: [embed],
             components: [group1]
-        })
+        });
+        db.set(`nsfwSetup_chan${message.guild.id}`, nsfwChan.id);
+        db.set(`nsfwSetup_msg${message.guild.id}`, m.id);
+        return;
     }
 }

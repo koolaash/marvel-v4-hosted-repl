@@ -9,8 +9,7 @@ module.exports = {
     botPermissions: ["EMBED_LINKS"],
 
     run: async (client, message, args) => {
-        let target = message.mentions.members
-            || message.mentions.members.first();
+        let target = message.mentions.members.first();
 
         let rng = Math.floor(Math.random() * 101);
 

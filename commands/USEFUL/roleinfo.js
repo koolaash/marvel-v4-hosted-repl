@@ -23,7 +23,7 @@ module.exports = {
         }
         message.channel.sendTyping()
         await message.guild.members.fetch();
-        let role = await message.mentions.roles.first() || await message.guild.roles.cache.find(r => r.id === args[0])
+        let role = await message.mentions.roles.first() || await message.guild.roles.cache.get(args[0])
             || await message.guild.roles.cache.find(r => r.name === args.join(" "));
 
         if (!role) {

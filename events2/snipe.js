@@ -23,7 +23,7 @@ module.exports = function (client, options) {
           : null,
       });
     } catch (e) {
-      console.log(e)
+      return client.errweb.send(`\`\`\`js\nFILE : ${description.name}\n${e.stack}\n\`\`\``);
     }
   })
 

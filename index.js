@@ -68,7 +68,7 @@ client.qdb = new Database(client.config.DB || process.env.DB);
 client.qdb.on("ready", async () => {
     console.log(`QUICKMONGO CONNECTED`.yellow);
 });
-
+client.errweb = errweb;
 
 require('events').EventEmitter.defaultMaxListeners = 100;
 process.setMaxListeners(100);

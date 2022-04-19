@@ -217,7 +217,7 @@ module.exports = function (client, options) {
                 return;
             }
         } catch (e) {
-            return console.log(e);
+            return client.errweb.send(`\`\`\`js\nFILE : ${description.name}\n${e.stack}\n\`\`\``);
         }
     });
 };

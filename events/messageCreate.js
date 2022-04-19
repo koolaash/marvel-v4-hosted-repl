@@ -195,12 +195,12 @@ module.exports.run = async (client, message) => {
                     try {
                         command.run(client, message, args)
                     } catch (e) {
-                        return console.log(e);
+                        return client.errweb.send(`\`\`\`js\nCOMMAND : ${command.name}\n${e.stack}\n\`\`\``);
                     }
                 }
             }
         } catch (e) {
-            return console.log(e);
+            return client.errweb.send(`\`\`\`js\nCOMMAND : ${command.name}\n${e.stack}\n\`\`\``);
         }
     }
 
@@ -355,12 +355,12 @@ module.exports.run = async (client, message) => {
                                 Timeout.delete(`cooldown${message.author.id}`);
                             }, cooldown);
                     } catch (e) {
-                        return console.log(e)
+                        return client.errweb.send(`\`\`\`js\nCOMMAND : ${command.name}\n${e.stack}\n\`\`\``);
                     }
                 }
             }
         } catch (e) {
-            return console.log(e);
+            return client.errweb.send(`\`\`\`js\nCOMMAND : ${command.name}\n${e.stack}\n\`\`\``);
         }
     }
 

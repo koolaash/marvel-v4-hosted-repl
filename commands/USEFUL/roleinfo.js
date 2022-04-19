@@ -11,10 +11,10 @@ module.exports = {
 
     async run(client, message, args) {
         await message.guild.members.fetch()
-        await message.guild.roles.fetch()
+        let roles = await message.guild.roles.fetch()
 
-        let role = message.mentions.roles.first() || message.guild.roles.cache.find(r => r.id === args[0])
-            || message.guild.roles.cache.find(r => r.name === args.join(" ")),
+        let role = message.mentions.roles.first() || roles.find(r => r.id === args[0])
+            || roles.find(r => r.name === args.join(" ")),
             embed = new discord.MessageEmbed({
                 color: role.hexColor || client.embed.cm,
                 title: `${role.name}'s Information`,
@@ -24,8 +24,8 @@ module.exports = {
                 .addField(`Role Mentionable`, role.mentionable ? 'Yes' : 'No', true)
                 .addField(`Role Color`, role.hexColor || 'Default', true)
                 .addField(`Role Display Saperately`, role.hoist ? 'Yes' : 'No', true)
-                //     .addField(`Role Position`, role.position)
-                .addField(`Role Members`, role.members.length || '0')
+                //   .addField(`Role Position`, role.position)
+                .addField(`Role Members`, role.members.size || '0')
                 //   .addField(`Members`, role.members.map(m => m) || "None")
                 .addField(`Role Permissions`, `\`${role.permissions.toArray().join("', '") || "None"}\``)
 
@@ -36,5 +36,6 @@ module.exports = {
             embed.setThumbnail(message.guild.iconURL({ dynamic: true }))
         }
         message.reply({ embeds: [embed] });
+        console.log(`${role.position}`)
     }
 };

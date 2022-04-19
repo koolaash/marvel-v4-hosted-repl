@@ -1,4 +1,5 @@
-const discord = require("discord.js");
+const discord = require("discord.js"),
+    moment = require("moment");
 
 module.exports = {
     name: "roleinfo",
@@ -49,11 +50,14 @@ module.exports = {
                 `**Role Display Saperately : **${role.hoist ? 'Yes' : 'No'}\n` +
                 `**Role Position : **${role.position}\n` +
                 `**Role Members : **${role.members.size || '0'}\n` +
+                `**Role Is Integration : **${role.managed ? 'Yes' : 'No'}\n` +
+                `**Role Deletable : **${role.editable ? 'Yes' : 'No'}\n` +
+                `**Role Created : **<t:${Math.round(moment.utc(role.createdTimestamp) / 1000)}:R>\n` +
                 `**Role Permissions : **\n\`${role.permissions.toArray().join("', '") || "None"}\`\n` +
                 `**Members : **\n${mem}`,
 
         })
             .setThumbnail(role.iconURL() || message.guild.iconURL({ dynamic: true }));
-        return message.reply({ embeds: [embed] });
+        return message.reply({ embeds: [embed] })
     }
 };

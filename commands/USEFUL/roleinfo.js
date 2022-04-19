@@ -53,7 +53,7 @@ module.exports = {
                 `**Members : **\n${mem}`,
 
         })
-            .setThumbnail(message.guild.iconURL({ dynamic: true }));
+            .setThumbnail(role.iconURL() || message.guild.iconURL({ dynamic: true }));
         return message.reply({ embeds: [embed] });
     }
 };

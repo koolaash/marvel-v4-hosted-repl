@@ -104,6 +104,7 @@ module.exports = {
                     p +
                     "prefix reset` - to change bots prefix to default" + "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.useful),
             em2 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -126,6 +127,7 @@ module.exports = {
                     "enable #channel/channel_id` - to enable bot commands in that channel\n`" + p + "disable #channel/channel_id` - to disable bot commands in that channel" +
                     "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.channel),
             em3 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -147,10 +149,11 @@ module.exports = {
                     p + "autorole <set|show|reset>` - to change settings of autorole\n`" +
                     p + "mmode <on|off>` - to turn on or off the mantainance mode`\n" +
                     p + "modonly` - to set the bot to mod only Needs\n`" +
-                    p + "roleiconn <emoji>` - to set the icon of any role\n`" +
-                    p + "steal` - to add any emoji from other srver to yours" +
+                    p + "roleicon <@role> <emoji>` - to set the icon of any role\n`" +
+                    p + "steal <emoji>` - to add any emoji from other srver to yours" +
                     "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.mod),
             em4 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -180,7 +183,8 @@ module.exports = {
                     p + "qidp [room-id] [room-pass]` - to send quick idp in message channel\n`" +
                     p + "say <message>` - to send any message via bot in non embed form`" +
                     "\n**━━━━━━━━━━━━━━━━━**"
-                ),
+                )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND"),
             em6 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
@@ -198,7 +202,8 @@ module.exports = {
                     p + "reset <welcome | nwelcome>` - run helpwelcome or nhelpwelcome for more info\n`" +
                     p + "set <welcome | nwelcome>` - run helpwelcome or nhelpwelcome for more info`" +
                     "\n**━━━━━━━━━━━━━━━━━**"
-                ),
+                )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND"),
             em7 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
@@ -216,6 +221,7 @@ module.exports = {
                     "ticket details` - to see if the ticket is already setup" +
                     "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.ticket),
             em8 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -253,6 +259,7 @@ module.exports = {
                     p +
                     "font smallcaps(sc) <message>` - to get text in this `ᴍᴀʀᴠᴇʟ` font" + "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.fonts),
             em9 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -299,6 +306,7 @@ module.exports = {
                     "volume <amount 1-100>` - change the volume of the player" +
                     "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.music),
             em10 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -319,6 +327,7 @@ module.exports = {
                     "banner <@user>` - to get user main banner" +
                     "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.avatar),
             em11 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -353,6 +362,7 @@ module.exports = {
                     "vip <role @role | show | @user>` - to set, see or give vip role to any user`" +
                     "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.role),
             a = "am ",
             em12 = new MessageEmbed()
@@ -392,6 +402,7 @@ module.exports = {
                     "unignore channel <#channel | channel_id>` - to remove any channel from ignored list" +
                     "\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
                 .setImage(client.gif.automod),
             em13 = new MessageEmbed()
                 .setColor(client.embed.cm)
@@ -433,7 +444,8 @@ module.exports = {
                     prefix +
                     "hentai <thigh>` - get a hentai nsfw image/gif of this category" +
                 "\n**━━━━━━━━━━━━━━━━━**"
-                ),
+                )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND"),
             em15 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
@@ -467,7 +479,8 @@ module.exports = {
                     prefix +
                     "neko <lesbian/lesbo>` - get a neko nsfw image/gif of this category" +
                 "\n**━━━━━━━━━━━━━━━━━**"
-                ),
+                )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND"),
             em16 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
@@ -494,7 +507,8 @@ module.exports = {
                     "porn <gif>` - get a real nsfw image/gif of this category\n`" +
                     prefix +
                     "porn <thigh>" + "` - get a real nsfw image/gif of this category\n**━━━━━━━━━━━━━━━━━**"
-                ),
+                )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND"),
             em17 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
@@ -512,7 +526,8 @@ module.exports = {
                     p + "pat @user` - pat them to calm them down\n`" +
                     p + "slap @user` - slap them to show you're angry with them\n`" +
                     p + "tickle @user` - tickle them an spread some giggles\n**━━━━━━━━━━━━━━━━━**"
-                ),
+                )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND"),
             em18 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
@@ -528,7 +543,8 @@ module.exports = {
                     p + "fliptext <text>` - flip some text for fun\n`" +
                     p + "hack @user` - hack someone you wants to\n`" +
                     p + "howgay @user` - check how much of a gay they are\n**━━━━━━━━━━━━━━━━━**"
-                ),
+                )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND"),
             em19 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
@@ -549,7 +565,8 @@ module.exports = {
                     p + "nitro` - fake someone with nitro\n`" +
                     p + "waifu` - get a random image of this category\n`" +
                     p + "wallpaper` - get a random image of this category\n**━━━━━━━━━━━━━━━━━**"
-                ),
+                )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND"),
             em20 = new MessageEmbed()
                 .setColor(client.embed.cm)
                 .setFooter({
@@ -573,6 +590,7 @@ module.exports = {
                     p + "trash [@user]` - convert a image into trash spidy style\n`" +
                     p + "trigger [@user]`- get a triggered gif of your image\n**━━━━━━━━━━━━━━━━━**"
                 )
+                .addField(`${client.emoji.ar}NOTE :`, "<> [] - DO NOT INCLUDE THESE WHILE EXECUTING A COMMAND")
 
         if (arg[0]) {
             let command = client.commands.get(arg[0]);

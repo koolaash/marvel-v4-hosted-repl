@@ -13,7 +13,8 @@ module.exports = {
         const embed = new discord.MessageEmbed({
             description: message.guild.memberCount,
             color: client.embed.cm,
-            title: `Total Members In : ${message.guild.name}`
+            title: `Total Members`,
+            timestamp: Date.now()
         })
         message.reply({ embeds: [embed] });
     }

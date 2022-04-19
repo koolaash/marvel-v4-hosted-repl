@@ -53,7 +53,7 @@ module.exports = {
                 `**Role Is Integration : **${role.managed ? 'Yes' : 'No'}\n` +
                 `**Role Deletable : **${role.editable ? 'Yes' : 'No'}\n` +
                 `**Role Created : **<t:${Math.round(moment.utc(role.createdTimestamp) / 1000)}:R>\n` +
-                `**Role Permissions : **\n\`${role.permissions.toArray().join("', '") || "None"}\`\n` +
+                `**Role Permissions : **\n\`'${role.permissions.toArray().join("', '") || "None"}\`\n` +
                 `**Members : **\n${mem}`,
             footer: {
                 text: message.author.tag,

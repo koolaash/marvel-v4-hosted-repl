@@ -55,7 +55,10 @@ module.exports = {
                 `**Role Created : **<t:${Math.round(moment.utc(role.createdTimestamp) / 1000)}:R>\n` +
                 `**Role Permissions : **\n\`${role.permissions.toArray().join("', '") || "None"}\`\n` +
                 `**Members : **\n${mem}`,
-
+            footer: {
+                text: message.author.tag,
+                iconURL: message.author.displayAvatarURL({ dynamic: true })
+            }
         })
             .setThumbnail(role.iconURL() || message.guild.iconURL({ dynamic: true }));
         return message.reply({ embeds: [embed] })

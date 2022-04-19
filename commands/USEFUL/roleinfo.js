@@ -10,11 +10,35 @@ module.exports = {
     botPermissions: ["EMBED_LINKS"],
 
     async run(client, message, args) {
-        await message.guild.members.fetch()
-
+        if (!args[0]) {
+            return message.reply({
+                embeds: [
+                    new discord.MessageEmbed({
+                        description: `${client.emoji.fail}| You forgot to provide the role!`,
+                        color: client.embed.cf
+                    })
+                ]
+            })
+        }
+        message.channel.sendTyping()
+        await message.guild.members.fetch();
         let role = await message.mentions.roles.first() || await message.guild.roles.cache.find(r => r.id === args[0])
-            || await message.guild.roles.cache.find(r => r.name === args.join(" "))
+            || await message.guild.roles.cache.find(r => r.name === args.join(" "));
 
+        if (!role) {
+            return message.reply({
+                embeds: [
+                    new discord.MessageEmbed({
+                        description: `${client.emoji.fail}| You forgot to provide the valid role!`,
+                        color: client.embed.cf
+                    })
+                ]
+            })
+        }
+        let mem = role.members.map(m => m);
+        if (role.members.size > 50) {
+            mem = `Members Size Exceeds The Value OF [50]`
+        }
 
         const embed = new discord.MessageEmbed({
             color: role.hexColor || client.embed.cm,
@@ -26,9 +50,10 @@ module.exports = {
                 `**Role Position : **${role.position}\n` +
                 `**Role Members : **${role.members.size || '0'}\n` +
                 `**Role Permissions : **\n\`${role.permissions.toArray().join("', '") || "None"}\`\n` +
-                `**Members : **Use dump command to check members!`,
-            thumbnail: message.guild.iconURL({ dynamic: true })
+                `**Members : **\n${mem}`,
+
         })
+            .setThumbnail(message.guild.iconURL({ dynamic: true }));
         return message.reply({ embeds: [embed] });
     }
 };

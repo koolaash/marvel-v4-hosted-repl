@@ -98,6 +98,8 @@ module.exports = {
                     p +
                     "badge` - to check your badges given to you by bot\n`" +
                     p +
+                    "roleinfo <@role>` - to check info of any role\n`" +
+                    p +
                     "prefix <new prefix>` - to change bots prefix\n`" +
                     p +
                     "prefix reset` - to change bots prefix to default" + "\n**━━━━━━━━━━━━━━━━━**"
@@ -144,7 +146,8 @@ module.exports = {
                     p + "purge <amount | user | bots | images>` - purge messages in a channel\n`" +
                     p + "autorole <set|show|reset>` - to change settings of autorole\n`" +
                     p + "mmode <on|off>` - to turn on or off the mantainance mode`\n" +
-                    p + "modonly` - to set the bot to mod only Needs \n`" +
+                    p + "modonly` - to set the bot to mod only Needs\n`" +
+                    p + "roleiconn <emoji>` - to set the icon of any role\n`" +
                     p + "steal` - to add any emoji from other srver to yours" +
                     "\n**━━━━━━━━━━━━━━━━━**"
                 )
@@ -156,7 +159,8 @@ module.exports = {
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .setImage(client.gif.afk)
-                .addField("AFK" + "\n━━━━━━━━━━━━━━━━━",
+                .addField(
+                    "AFK" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
                     p + "afk <reason>` - to set your afk\n`" +
                     p + "afk-clear <@user>` - to clear anyone's afk" + "\n**━━━━━━━━━━━━━━━━━**"

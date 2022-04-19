@@ -41,7 +41,7 @@ module.exports = {
                 .addField(
                     "MAIN COMMANDS",
                     "**" +
-                    client.emoji.extra + "Useful\n" +
+                    client.emoji.extra + "Information\n" +
                     client.emoji.channels + "Channels\n" +
                     client.emoji.mod + "Mod\n" +
                     client.emoji.tournament + "Tournament\n" +
@@ -79,7 +79,7 @@ module.exports = {
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
-                    "USEFUL" + "\n━━━━━━━━━━━━━━━━━",
+                    "INFORMATION" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
                     p +
                     "invite` - bots invite & support\n`" +

@@ -4,7 +4,7 @@ module.exports = {
     name: "membercount",
     aliases: ['members', 'mc', 'users', 'member-count'],
     desciption: "shows the total members of a guild",
-    category: "USEFUL",
+    category: "INFORMATION",
     usage: "membercount",
     userPermissions: [],
     botPermissions: ["EMBED_LINKS"],

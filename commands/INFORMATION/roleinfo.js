@@ -5,7 +5,7 @@ module.exports = {
     name: "roleinfo",
     aliases: ['ri'],
     desciption: "shows the information about a role of a guild",
-    category: "USEFUL",
+    category: "INFORMATION",
     usage: "roleinfi @role/role_id",
     userPermissions: [],
     botPermissions: ["EMBED_LINKS"],
@@ -45,6 +45,7 @@ module.exports = {
             color: role.hexColor || client.embed.cm,
             title: `${role.name}'s Information`,
             description: `**Role ID : **${role.id}\n` +
+                `**Role Display Name : **${role.name}\n` +
                 `**Role Mentionable : **${role.mentionable ? 'Yes' : 'No'}\n` +
                 `**Role Color : **${role.hexColor || 'Default'}\n` +
                 `**Role Display Saperately : **${role.hoist ? 'Yes' : 'No'}\n` +

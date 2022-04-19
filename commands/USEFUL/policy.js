@@ -35,10 +35,10 @@ module.exports = {
             )
             .setColor(client.embed.cm)
             .setThumbnail(message.guild.iconURL({ dynamic: true }))
-            .setFooter(
-                message.guild.name + " | Policy Last Updated : 5th of August 2021",
-                client.user.displayAvatarURL()
-            );
+            .setFooter({
+                text: message.guild.name + " | Policy Last Updated : 5th of August 2021",
+                iconURL: client.user.displayAvatarURL()
+            });
         message.reply({ embeds: [embed] });
     }
 };

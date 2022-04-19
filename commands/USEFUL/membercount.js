@@ -1,0 +1,20 @@
+const discord = require("discord.js");
+
+module.exports = {
+    name: "membercount",
+    aliases: ['members', 'mc', 'users', 'member-count'],
+    desciption: "shows the total members of a guild",
+    category: "USEFUL",
+    usage: "membercount",
+    userPermissions: [],
+    botPermissions: ["EMBED_LINKS"],
+
+    async run(client, message, args) {
+        const embed = new discord.MessageEmbed({
+            description: message.guild.memberCount,
+            color: client.embed.cm,
+            title: `Total Members In : ${message.guild.name}`
+        })
+        message.reply({ embeds: [embed] });
+    }
+};

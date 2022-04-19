@@ -29,7 +29,8 @@ module.exports = {
             admin = db.get("admin" + target.user.id),
             mod = db.get("mod" + target.user.id),
             vip = db.get("vip" + target.user.id),
-            superr = db.get("super" + target.id);
+            superr = db.get("super" + target.id),
+            beta = db.get('beta' + target.id);
 
         let badges = [],
             memName;
@@ -50,7 +51,7 @@ module.exports = {
             coow === null && codev === null && team === null &&
             partner === null && sup === null && bug === null &&
             superr === null && one === null && early === null &&
-            admin === null && mod === null && vip === null
+            admin === null && mod === null && vip === null && beta === null
         ) {
             embed.setDescription("__**You Don't Have Any Badge Yet!**__");
             embed.addField(
@@ -132,6 +133,11 @@ module.exports = {
             badges.push(
                 `__**${client.badge.bug} BUG HUNTER**__`
             );
+        }
+        if (beta === true) {
+            badges.push(
+                `__**${client.emoji.marvel} BETA TESTER**__`
+            )
         }
         embed.setDescription(badges.join("\n"))
         return message.reply({ embeds: [embed] });

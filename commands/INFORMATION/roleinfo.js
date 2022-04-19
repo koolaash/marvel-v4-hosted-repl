@@ -54,7 +54,7 @@ module.exports = {
                 `**Role Is Integration : **${role.managed ? 'Yes' : 'No'}\n` +
                 `**Role Deletable : **${role.editable ? 'Yes' : 'No'}\n` +
                 `**Role Created : **<t:${Math.round(moment.utc(role.createdTimestamp) / 1000)}:R>\n` +
-                `**Role Custom Icon : ${role.iconURL() ? `Yes\n**Role Icon : **[Download Here](${role.iconURL({ format: 'png' })})` : "No"}\n` +
+                `**Role Custom Icon : **${role.iconURL() ? `Yes\n**Role Icon : **[Download Here](${role.iconURL({ format: 'png' })})` : "No"}\n` +
                 `**Role Permissions : **\n\`'${role.permissions.toArray().join("', '") || "None"}'\`\n` +
                 `**Members : **\n${mem}`,
             footer: {

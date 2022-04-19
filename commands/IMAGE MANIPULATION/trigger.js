@@ -16,7 +16,7 @@ module.exports = {
             img = mem.user.displayAvatarURL({ size: 2048, format: 'png' });
         message.channel.sendTyping();
         let output = await new DIG.Triggered().getImage(img),
-            attach = new Discord.MessageAttachment(output, "blur.gif");
+            attach = new Discord.MessageAttachment(output, `${nam}.gif`);
         return message.reply({ files: [attach] });
     }
 };

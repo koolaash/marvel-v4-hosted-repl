@@ -1,3 +1,5 @@
+const { MessageEmbed } = require("discord.js");
+
 module.exports = {
     name: "catsay",
     // aliases: [],
@@ -10,7 +12,14 @@ module.exports = {
     run: async (client, message, args) => {
         const msg = args.join(" ");
         if (!msg) {
-            return message.channel.send("What you want the cat to say?");
+            return message.reply({
+                embeds: [
+                    new MessageEmbed({
+                        description: client.emoji.fail + "What you want the cat to say?",
+                        color: client.embed.cf
+                    })
+                ]
+            });
         }
         let im = `https://cataas.com/cat/cute/says/${msg}`;
         message.channel.sendTyping();

@@ -14,6 +14,10 @@ module.exports = {
 
         let img = message.author.displayAvatarURL({ size: 2048, format: 'png' }),
             amt = args[0];
+        if (message.mentions.members.size > 0) {
+            let m = message.mentions.members.first();
+            img = m.user.displayAvatarURL({ size: 2048, format: 'png' })
+        }
         if (args[0] && isNaN(args[0])) {
             img = args[0]
             amt = args[1]

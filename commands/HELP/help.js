@@ -23,7 +23,7 @@ module.exports = {
             damon = await client.users.fetch(client.config.damon_id)
         }
 
-        let pages = 20,
+        let pages = 21,
             em0 = new MessageEmbed()
                 .setTitle(`${client.user.username} Help Menu`)
                 .setColor(client.embed.cm)
@@ -268,7 +268,7 @@ module.exports = {
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
-                    `QUICK ROLES\n━━━━━━━━━━━━━━━━━`,
+                    `MUSIC\n━━━━━━━━━━━━━━━━━`,
                     "`" +
                     p +
                     "setchannel <channel>` - to set text channel for music commands\n`" +
@@ -336,8 +336,10 @@ module.exports = {
                     iconURL: message.author.displayAvatarURL({ dynamic: true })
                 })
                 .addField(
-                    "MUSIC" + "\n━━━━━━━━━━━━━━━━━",
+                    "ROLES" + "\n━━━━━━━━━━━━━━━━━",
                     "`" +
+                    p +
+                    "selfrole` - to start interactive self role setup\n`" +
                     p +
                     "modrole <set | show>` - to set or see mod role\n`" +
                     p +
